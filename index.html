@@ -5,44 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="An interactive field of dots that bends away from your cursor."
+      content="A curated collection of interactive, generative web backgrounds."
     />
-    <title>Dot Field</title>
+    <title>Fields — Interactive Background Gallery</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <canvas id="dot-field" aria-hidden="true"></canvas>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Fields home">
+        <span class="brand-mark"><i></i><i></i><i></i><i></i></span>
+        <span>Fields</span>
+      </a>
+
+      <div class="header-meta">
+        <span><b id="header-count">41</b> experiments</span>
+        <span>Canvas / CSS / JS</span>
+      </div>
+    </header>
 
     <main>
-      <div class="eyebrow">
-        <span class="status-dot"></span>
-        Interactive field
-      </div>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="kicker"><span></span>Interactive background archive</div>
+          <h1>Digital fields<br />that <em>respond.</em></h1>
+          <p>
+            A growing collection of playful, generative environments. Move,
+            click, drag, and explore—every piece reacts to you.
+          </p>
+        </div>
 
-      <h1>Move through<br />the <em>field.</em></h1>
+        <button class="featured" id="featured" type="button">
+          <span class="featured-art" style="--a:#73ddff;--b:#7457ff">
+            <i></i><i></i><i></i>
+            <span class="featured-cursor"></span>
+          </span>
+          <span class="featured-info">
+            <small>Featured experiment</small>
+            <strong>Wave Grid</strong>
+            <span>Open live preview <b>↗</b></span>
+          </span>
+        </button>
+      </section>
 
-      <p>
-        A quiet grid of particles that gives way as you move. Glide your
-        cursor across the screen to disturb the surface.
-      </p>
+      <section class="collection" id="collection">
+        <div class="collection-head">
+          <div>
+            <span class="section-index">01 / COLLECTION</span>
+            <h2>Explore the fields</h2>
+          </div>
+
+          <label class="search">
+            <span aria-hidden="true"></span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search experiments"
+              autocomplete="off"
+            />
+            <kbd>/</kbd>
+          </label>
+        </div>
+
+        <div class="filters" id="filters" aria-label="Filter projects">
+          <button class="active" data-filter="all" type="button">All <sup>41</sup></button>
+          <button data-filter="particles" type="button">Particles</button>
+          <button data-filter="fluid" type="button">Fluid</button>
+          <button data-filter="geometry" type="button">Geometry</button>
+          <button data-filter="nature" type="button">Nature</button>
+          <button data-filter="space" type="button">Space</button>
+          <button data-filter="light" type="button">Light</button>
+        </div>
+
+        <div class="gallery" id="gallery"></div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <span>∅</span>
+          <h3>No fields found</h3>
+          <p>Try another search or category.</p>
+        </div>
+      </section>
     </main>
 
-    <div class="hint" aria-hidden="true">
-      <span class="mouse"><span></span></span>
-      Move to explore
-    </div>
+    <footer>
+      <span>41 interactive studies</span>
+      <span>Move slowly. Stay curious.</span>
+      <a href="#">Back to top ↑</a>
+    </footer>
 
-    <button class="mode-toggle" id="mode-toggle" type="button" aria-pressed="false">
-      <span class="mode-icon" aria-hidden="true">
-        <i></i>
-        <i></i>
-        <i></i>
-      </span>
-      <span>
-        <small>Interaction</small>
-        <strong id="mode-label">Repel</strong>
-      </span>
-    </button>
+    <dialog class="preview-dialog" id="preview-dialog">
+      <div class="preview-bar">
+        <div>
+          <span class="preview-dot"></span>
+          <strong id="preview-title">Preview</strong>
+          <small id="preview-category"></small>
+        </div>
+        <div class="preview-actions">
+          <a id="open-project" href="#" target="_blank" rel="noopener">
+            Open full page ↗
+          </a>
+          <button id="close-preview" type="button" aria-label="Close preview">×</button>
+        </div>
+      </div>
+      <div class="preview-stage">
+        <div class="preview-loader"><i></i><span>Loading field</span></div>
+        <iframe id="preview-frame" title="Interactive background preview"></iframe>
+      </div>
+    </dialog>
 
     <script src="script.js"></script>
   </body>

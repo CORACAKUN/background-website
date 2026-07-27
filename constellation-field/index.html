@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An interactive constellation of particles and glowing connections."
+    />
+    <title>Constellation Field</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="constellation" aria-hidden="true"></canvas>
+
+    <main>
+      <div class="eyebrow"><span></span>Live constellation</div>
+      <h1>Find the<br /><em>connection.</em></h1>
+      <p>
+        Drift through a field of moving stars. Nearby points discover each
+        other—and your cursor becomes part of the constellation.
+      </p>
+    </main>
+
+    <div class="coordinates" aria-hidden="true">
+      <span id="coordinate-x">X 000</span>
+      <span id="coordinate-y">Y 000</span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
