@@ -1,1 +1,75 @@
-*{box-sizing:border-box}body{margin:0;overflow:hidden;background:#f4d9c0;color:#33241d;font-family:system-ui}.layers,.layers i{position:fixed;inset:0}.layers i{top:auto;height:65%;background:var(--c);clip-path:polygon(0 55%,15% 25%,29% 48%,45% 12%,60% 48%,76% 22%,100% 53%,100% 100%,0 100%);transform:translate(var(--x),var(--y));transition:transform .15s}.layers i:nth-child(1){--c:#d99179;opacity:.55}.layers i:nth-child(2){--c:#be7569;transform:scale(.9);top:12%}.layers i:nth-child(3){--c:#80586a;top:22%}.layers i:nth-child(4){--c:#44536a;top:34%}.layers i:nth-child(5){--c:#202f43;top:47%}main{position:relative;z-index:2;display:flex;min-height:100vh;padding:7vw;flex-direction:column;justify-content:center;pointer-events:none}small{letter-spacing:.2em}h1{margin:25px 0;font-size:clamp(60px,9vw,130px);line-height:.85;letter-spacing:-.07em;font-weight:500}em{font-family:Georgia}p{color:#33241d99}@media(max-width:600px){main{justify-content:flex-end;padding:24px 24px 90px}}
+* {
+  box-sizing:border-box
+}
+body {
+  margin:0;
+  overflow:hidden;
+  background:#f4d9c0;
+  color:#33241d;
+  font-family:system-ui
+}
+.layers,.layers i {
+  position:fixed;
+  inset:0
+}
+.layers i {
+  top:auto;
+  height:65%;
+  background:var(--c);
+  clip-path:polygon(0 55%,15% 25%,29% 48%,45% 12%,60% 48%,76% 22%,100% 53%,100% 100%,0 100%);
+  transform:translate(var(--x),var(--y));
+  transition:transform .15s
+}
+.layers i:nth-child(1) {
+  --c:#d99179;
+  opacity:.55
+}
+.layers i:nth-child(2) {
+  --c:#be7569;
+  transform:scale(.9);
+  top:12%
+}
+.layers i:nth-child(3) {
+  --c:#80586a;
+  top:22%
+}
+.layers i:nth-child(4) {
+  --c:#44536a;
+  top:34%
+}
+.layers i:nth-child(5) {
+  --c:#202f43;
+  top:47%
+}
+main {
+  position:relative;
+  z-index:2;
+  display:flex;
+  min-height:100vh;
+  padding:7vw;
+  flex-direction:column;
+  justify-content:center;
+  pointer-events:none
+}
+small {
+  letter-spacing:.2em
+}
+h1 {
+  margin:25px 0;
+  font-size:clamp(60px,9vw,130px);
+  line-height:.85;
+  letter-spacing:-.07em;
+  font-weight:500
+}
+em {
+  font-family:Georgia
+}
+p {
+  color:#33241d99
+}
+@media(max-width:600px) {
+  main {
+    justify-content:flex-end;
+    padding:24px 24px 90px
+  }
+}

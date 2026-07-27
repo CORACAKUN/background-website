@@ -1,3 +1,87 @@
-const c=document.querySelector("#scene"),g=c.getContext("2d"),pts=[],m={x:0,y:0,down:false};let w,h,d,gap=32,cols,rows;
-function fit(){w=innerWidth;h=innerHeight;d=Math.min(devicePixelRatio||1,2);c.width=w*d;c.height=h*d;g.setTransform(d,0,0,d,0,0);gap=w<600?27:34;cols=Math.ceil(w/gap)+2;rows=Math.ceil(h/gap)+2;pts.length=0;for(let y=0;y<rows;y++)for(let x=0;x<cols;x++){const X=(x-1)*gap,Y=(y-1)*gap;pts.push({x:X,y:Y,hx:X,hy:Y,vx:0,vy:0})}}addEventListener("resize",fit);addEventListener("pointermove",e=>{m.x=e.clientX;m.y=e.clientY});addEventListener("pointerdown",e=>{m.down=true;m.x=e.clientX;m.y=e.clientY});addEventListener("pointerup",()=>m.down=false);
-function loop(){g.clearRect(0,0,w,h);for(const p of pts){const dx=m.x-p.x,dy=m.y-p.y,r=Math.hypot(dx,dy)||1;if(m.down&&r<190){const f=(1-r/190)*.72;p.vx+=dx/r*f;p.vy+=dy/r*f}p.vx+=(p.hx-p.x)*.035;p.vy+=(p.hy-p.y)*.035;p.vx*=.86;p.vy*=.86;p.x+=p.vx;p.y+=p.vy}g.strokeStyle="rgba(224,120,255,.17)";g.lineWidth=.6;for(let y=0;y<rows;y++){g.beginPath();for(let x=0;x<cols;x++){const p=pts[y*cols+x];x?g.lineTo(p.x,p.y):g.moveTo(p.x,p.y)}g.stroke()}for(let x=0;x<cols;x++){g.beginPath();for(let y=0;y<rows;y++){const p=pts[y*cols+x];y?g.lineTo(p.x,p.y):g.moveTo(p.x,p.y)}g.stroke()}for(const p of pts){const stretch=Math.hypot(p.x-p.hx,p.y-p.hy);if(stretch>3){g.fillStyle=`rgba(247,186,255,${Math.min(.8,stretch/80)})`;g.beginPath();g.arc(p.x,p.y,1.3,0,6.28);g.fill()}}requestAnimationFrame(loop)}fit();loop();
+const c=document.querySelector("#scene"), g=c.getContext("2d"), pts=[], m= {
+  x:0,
+  y:0,
+  down:false
+};
+let w, h, d, gap=32, cols, rows;
+function fit() {
+  w=innerWidth;
+  h=innerHeight;
+  d=Math.min(devicePixelRatio||1, 2);
+  c.width=w*d;
+  c.height=h*d;
+  g.setTransform(d, 0, 0, d, 0, 0);
+  gap=w<600?27:34;
+  cols=Math.ceil(w/gap)+2;
+  rows=Math.ceil(h/gap)+2;
+  pts.length=0;
+  for(let y=0;y<rows;y++)for(let x=0;x<cols;x++) {
+    const X=(x-1)*gap, Y=(y-1)*gap;
+    pts.push( {
+      x:X,
+      y:Y,
+      hx:X,
+      hy:Y,
+      vx:0,
+      vy:0
+    })
+  }
+}
+addEventListener("resize", fit);
+addEventListener("pointermove", e=> {
+  m.x=e.clientX;
+  m.y=e.clientY
+});
+addEventListener("pointerdown", e=> {
+  m.down=true;
+  m.x=e.clientX;
+  m.y=e.clientY
+});
+addEventListener("pointerup", ()=>m.down=false);
+function loop() {
+  g.clearRect(0, 0, w, h);
+  for(const p of pts) {
+    const dx=m.x-p.x, dy=m.y-p.y, r=Math.hypot(dx, dy)||1;
+    if(m.down&&r<190) {
+      const f=(1-r/190)*.72;
+      p.vx+=dx/r*f;
+      p.vy+=dy/r*f
+    }
+    p.vx+=(p.hx-p.x)*.035;
+    p.vy+=(p.hy-p.y)*.035;
+    p.vx*=.86;
+    p.vy*=.86;
+    p.x+=p.vx;
+    p.y+=p.vy
+  }
+  g.strokeStyle="rgba(224,120,255,.17)";
+  g.lineWidth=.6;
+  for(let y=0;y<rows;y++) {
+    g.beginPath();
+    for(let x=0;x<cols;x++) {
+      const p=pts[y*cols+x];
+      x?g.lineTo(p.x, p.y):g.moveTo(p.x, p.y)
+    }
+    g.stroke()
+  }
+  for(let x=0;x<cols;x++) {
+    g.beginPath();
+    for(let y=0;y<rows;y++) {
+      const p=pts[y*cols+x];
+      y?g.lineTo(p.x, p.y):g.moveTo(p.x, p.y)
+    }
+    g.stroke()
+  }
+  for(const p of pts) {
+    const stretch=Math.hypot(p.x-p.hx, p.y-p.hy);
+    if(stretch>3) {
+      g.fillStyle=`rgba(247,186,255,${Math.min(.8,stretch/80)})`;
+      g.beginPath();
+      g.arc(p.x, p.y, 1.3, 0, 6.28);
+      g.fill()
+    }
+  }
+  requestAnimationFrame(loop)
+}
+fit();
+loop();

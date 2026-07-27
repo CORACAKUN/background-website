@@ -1,3 +1,58 @@
-const c=document.querySelector("#scene"),g=c.getContext("2d"),p=[],m={x:-999,y:-999,on:false};let w,h,d,cell=15;
-function fit(){w=innerWidth;h=innerHeight;d=Math.min(devicePixelRatio||1,2);c.width=w*d;c.height=h*d;g.setTransform(d,0,0,d,0,0);cell=w<600?12:16;p.length=0;for(let y=-cell;y<h+cell;y+=cell)for(let x=-cell;x<w+cell;x+=cell){const nx=x/w,ny=y/h,hue=18+nx*35+Math.sin(ny*5)*18,light=18+Math.max(0,1-Math.hypot(nx-.72,ny-.42)*1.8)*42;p.push({x,y,hx:x,hy:y,vx:0,vy:0,hue,light})}}addEventListener("resize",fit);addEventListener("pointermove",e=>{m.x=e.clientX;m.y=e.clientY;m.on=true});document.documentElement.addEventListener("pointerleave",()=>m.on=false);
-function loop(){g.fillStyle="#0b0908";g.fillRect(0,0,w,h);for(const q of p){const dx=q.x-m.x,dy=q.y-m.y,r=Math.hypot(dx,dy)||1;if(m.on&&r<145){const f=(1-r/145)**2*2.7;q.vx+=dx/r*f;q.vy+=dy/r*f}q.vx+=(q.hx-q.x)*.075;q.vy+=(q.hy-q.y)*.075;q.vx*=.79;q.vy*=.79;q.x+=q.vx;q.y+=q.vy;const shift=Math.min(1,Math.hypot(q.x-q.hx,q.y-q.hy)/55);g.fillStyle=`hsla(${q.hue+shift*130},80%,${q.light+shift*20}%,${.66+shift*.34})`;const s=cell-2-shift*4;g.fillRect(q.x-s/2,q.y-s/2,s,s)}requestAnimationFrame(loop)}fit();loop();
+const c=document.querySelector("#scene"), g=c.getContext("2d"), p=[], m= {
+  x:-999,
+  y:-999,
+  on:false
+};
+let w, h, d, cell=15;
+function fit() {
+  w=innerWidth;
+  h=innerHeight;
+  d=Math.min(devicePixelRatio||1, 2);
+  c.width=w*d;
+  c.height=h*d;
+  g.setTransform(d, 0, 0, d, 0, 0);
+  cell=w<600?12:16;
+  p.length=0;
+  for(let y=-cell;y<h+cell;y+=cell)for(let x=-cell;x<w+cell;x+=cell) {
+    const nx=x/w, ny=y/h, hue=18+nx*35+Math.sin(ny*5)*18, light=18+Math.max(0, 1-Math.hypot(nx-.72, ny-.42)*1.8)*42;
+    p.push( {
+      x, y,
+      hx:x,
+      hy:y,
+      vx:0,
+      vy:0, hue, light
+    })
+  }
+}
+addEventListener("resize", fit);
+addEventListener("pointermove", e=> {
+  m.x=e.clientX;
+  m.y=e.clientY;
+  m.on=true
+});
+document.documentElement.addEventListener("pointerleave", ()=>m.on=false);
+function loop() {
+  g.fillStyle="#0b0908";
+  g.fillRect(0, 0, w, h);
+  for(const q of p) {
+    const dx=q.x-m.x, dy=q.y-m.y, r=Math.hypot(dx, dy)||1;
+    if(m.on&&r<145) {
+      const f=(1-r/145)**2*2.7;
+      q.vx+=dx/r*f;
+      q.vy+=dy/r*f
+    }
+    q.vx+=(q.hx-q.x)*.075;
+    q.vy+=(q.hy-q.y)*.075;
+    q.vx*=.79;
+    q.vy*=.79;
+    q.x+=q.vx;
+    q.y+=q.vy;
+    const shift=Math.min(1, Math.hypot(q.x-q.hx, q.y-q.hy)/55);
+    g.fillStyle=`hsla(${q.hue+shift*130},80%,${q.light+shift*20}%,${.66+shift*.34})`;
+    const s=cell-2-shift*4;
+    g.fillRect(q.x-s/2, q.y-s/2, s, s)
+  }
+  requestAnimationFrame(loop)
+}
+fit();
+loop();

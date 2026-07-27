@@ -1,4 +1,52 @@
-const c=document.querySelector("#c"),g=c.getContext("2d");let w,h,d,m={x:innerWidth*.75,y:innerHeight*.42},flash=0,t=0;
-function fit(){w=innerWidth;h=innerHeight;d=Math.min(devicePixelRatio||1,2);c.width=w*d;c.height=h*d;g.setTransform(d,0,0,d,0,0)}addEventListener("resize",fit);addEventListener("pointermove",e=>{m.x=e.clientX;m.y=e.clientY});addEventListener("pointerdown",()=>flash=1);
-function bolt(x1,y1,x2,y2,alpha=.8,width=1){let dx=x2-x1,dy=y2-y1,len=Math.hypot(dx,dy),steps=Math.max(4,Math.floor(len/22));g.beginPath();g.moveTo(x1,y1);for(let i=1;i<steps;i++){let u=i/steps,spread=Math.sin(u*Math.PI)*22*(.35+Math.random()),px=x1+dx*u-dy/len*(Math.random()-.5)*spread,py=y1+dy*u+dx/len*(Math.random()-.5)*spread;g.lineTo(px,py);if(Math.random()<.14&&alpha>.3)bolt(px,py,px+(Math.random()-.5)*100,py+30+Math.random()*90,alpha*.35,.5)}g.lineTo(x2,y2);g.strokeStyle=`rgba(135,183,255,${alpha})`;g.lineWidth=width;g.shadowColor="#6ca8ff";g.shadowBlur=12;g.stroke();g.shadowBlur=0}
-function loop(){g.fillStyle=`rgba(${5+flash*18},${8+flash*24},${22+flash*45},.55)`;g.fillRect(0,0,w,h);if(t%3===0||flash>.1){bolt(w*.88,-20,m.x,m.y,.55+flash*.45,1+flash*1.8);g.fillStyle=`rgba(170,205,255,${.2+flash*.6})`;g.beginPath();g.arc(m.x,m.y,3+flash*8,0,7);g.fill()}flash*=.88;t++;requestAnimationFrame(loop)}fit();loop();
+const c=document.querySelector("#c"), g=c.getContext("2d");
+let w, h, d, m= {
+  x:innerWidth*.75,
+  y:innerHeight*.42
+}, flash=0, t=0;
+function fit() {
+  w=innerWidth;
+  h=innerHeight;
+  d=Math.min(devicePixelRatio||1, 2);
+  c.width=w*d;
+  c.height=h*d;
+  g.setTransform(d, 0, 0, d, 0, 0)
+}
+addEventListener("resize", fit);
+addEventListener("pointermove", e=> {
+  m.x=e.clientX;
+  m.y=e.clientY
+});
+addEventListener("pointerdown", ()=>flash=1);
+function bolt(x1, y1, x2, y2, alpha=.8, width=1) {
+  let dx=x2-x1, dy=y2-y1, len=Math.hypot(dx, dy), steps=Math.max(4, Math.floor(len/22));
+  g.beginPath();
+  g.moveTo(x1, y1);
+  for(let i=1;i<steps;i++) {
+    let u=i/steps, spread=Math.sin(u*Math.PI)*22*(.35+Math.random()), px=x1+dx*u-dy/len*(Math.random()-.5)*spread, py=y1+dy*u+dx/len*(Math.random()-.5)*spread;
+    g.lineTo(px, py);
+    if(Math.random()<.14&&alpha>.3)bolt(px, py, px+(Math.random()-.5)*100, py+30+Math.random()*90, alpha*.35, .5)
+  }
+  g.lineTo(x2, y2);
+  g.strokeStyle=`rgba(135,183,255,${alpha})`;
+  g.lineWidth=width;
+  g.shadowColor="#6ca8ff";
+  g.shadowBlur=12;
+  g.stroke();
+  g.shadowBlur=0
+}
+function loop() {
+  g.fillStyle=`rgba(${5+flash*18},${8+flash*24},${22+flash*45},.55)`;
+  g.fillRect(0, 0, w, h);
+  if(t%3===0||flash>.1) {
+    bolt(w*.88, -20, m.x, m.y, .55+flash*.45, 1+flash*1.8);
+    g.fillStyle=`rgba(170,205,255,${.2+flash*.6})`;
+    g.beginPath();
+    g.arc(m.x, m.y, 3+flash*8, 0, 7);
+    g.fill()
+  }
+  flash*=.88;
+  t++;
+  requestAnimationFrame(loop)
+}
+fit();
+loop();

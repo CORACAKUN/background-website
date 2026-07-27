@@ -1,4 +1,56 @@
-const c=document.querySelector("#scene"),g=c.getContext("2d"),drops=[],colors=[[126,31,73],[26,92,116],[210,102,49],[75,48,126],[32,112,88]];let w,h,d,t=0;
-function fit(){w=innerWidth;h=innerHeight;d=Math.min(devicePixelRatio||1,1.5);c.width=w*d;c.height=h*d;g.setTransform(d,0,0,d,0,0)}addEventListener("resize",fit);
-function bloom(x,y,n=16){const col=colors[Math.floor(Math.random()*colors.length)];for(let i=0;i<n;i++){const a=Math.random()*6.28,r=Math.random()*24;drops.push({x:x+Math.cos(a)*r,y:y+Math.sin(a)*r,vx:Math.cos(a)*Math.random()*.22,vy:Math.sin(a)*Math.random()*.22-.03,r:5+Math.random()*18,grow:.12+Math.random()*.28,life:.22+Math.random()*.28,col,phase:Math.random()*6.28})}if(drops.length>260)drops.splice(0,drops.length-260)}
-addEventListener("pointerdown",e=>bloom(e.clientX,e.clientY,24));function loop(){g.clearRect(0,0,w,h);g.globalCompositeOperation="multiply";for(let i=drops.length-1;i>=0;i--){const q=drops[i];q.x+=q.vx+Math.sin(t*.01+q.phase)*.06;q.y+=q.vy;q.r+=q.grow;q.life*=.9987;const gr=g.createRadialGradient(q.x,q.y,q.r*.08,q.x,q.y,q.r);gr.addColorStop(0,`rgba(${q.col},${q.life})`);gr.addColorStop(.55,`rgba(${q.col},${q.life*.55})`);gr.addColorStop(1,`rgba(${q.col},0)`);g.fillStyle=gr;g.beginPath();g.arc(q.x,q.y,q.r,0,6.28);g.fill();if(q.life<.012)drops.splice(i,1)}g.globalCompositeOperation="source-over";t++;requestAnimationFrame(loop)}fit();bloom(w*.72,h*.4,30);bloom(w*.82,h*.6,20);loop();
+const c=document.querySelector("#scene"), g=c.getContext("2d"), drops=[], colors=[[126, 31, 73], [26, 92, 116], [210, 102, 49], [75, 48, 126], [32, 112, 88]];
+let w, h, d, t=0;
+function fit() {
+  w=innerWidth;
+  h=innerHeight;
+  d=Math.min(devicePixelRatio||1, 1.5);
+  c.width=w*d;
+  c.height=h*d;
+  g.setTransform(d, 0, 0, d, 0, 0)
+}
+addEventListener("resize", fit);
+function bloom(x, y, n=16) {
+  const col=colors[Math.floor(Math.random()*colors.length)];
+  for(let i=0;i<n;i++) {
+    const a=Math.random()*6.28, r=Math.random()*24;
+    drops.push( {
+      x:x+Math.cos(a)*r,
+      y:y+Math.sin(a)*r,
+      vx:Math.cos(a)*Math.random()*.22,
+      vy:Math.sin(a)*Math.random()*.22-.03,
+      r:5+Math.random()*18,
+      grow:.12+Math.random()*.28,
+      life:.22+Math.random()*.28, col,
+      phase:Math.random()*6.28
+    })
+  }
+  if(drops.length>260)drops.splice(0, drops.length-260)
+}
+addEventListener("pointerdown", e=>bloom(e.clientX, e.clientY, 24));
+function loop() {
+  g.clearRect(0, 0, w, h);
+  g.globalCompositeOperation="multiply";
+  for(let i=drops.length-1;i>=0;i--) {
+    const q=drops[i];
+    q.x+=q.vx+Math.sin(t*.01+q.phase)*.06;
+    q.y+=q.vy;
+    q.r+=q.grow;
+    q.life*=.9987;
+    const gr=g.createRadialGradient(q.x, q.y, q.r*.08, q.x, q.y, q.r);
+    gr.addColorStop(0, `rgba(${q.col},${q.life})`);
+    gr.addColorStop(.55, `rgba(${q.col},${q.life*.55})`);
+    gr.addColorStop(1, `rgba(${q.col},0)`);
+    g.fillStyle=gr;
+    g.beginPath();
+    g.arc(q.x, q.y, q.r, 0, 6.28);
+    g.fill();
+    if(q.life<.012)drops.splice(i, 1)
+  }
+  g.globalCompositeOperation="source-over";
+  t++;
+  requestAnimationFrame(loop)
+}
+fit();
+bloom(w*.72, h*.4, 30);
+bloom(w*.82, h*.6, 20);
+loop();
