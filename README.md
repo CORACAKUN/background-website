@@ -1,6 +1,6 @@
 # Fields
 
-**Fields** is a curated gallery of 41 interactive and generative web
+**Fields** is a curated gallery of 42 interactive and generative web
 backgrounds. Every experiment is built with plain HTML, CSS, and JavaScript,
 with no framework or build step required.
 
@@ -102,6 +102,7 @@ interaction.
 | [Hyperspace Lattice](hyperspace-lattice/) | A steerable rotating wireframe corridor |
 | [Generative Kaleidoscope](generative-kaleidoscope/) | Twelve-fold mirrored geometry controlled by movement |
 | [Circuit Board](circuit-board/) | Electrical packets routing across a living circuit |
+| [Motherboard Network](motherboard-network/) | A central CPU exchanging live data with GPU, RAM, NVMe, power, chipset, and I/O |
 
 ### Nature
 
@@ -268,7 +269,7 @@ Descriptive page text remains available above each canvas.
 
 ## Performance notes
 
-The gallery uses generated CSS artwork for its cards instead of running 41
+The gallery uses generated CSS artwork for its cards instead of running 42
 canvas simulations at once. A background is loaded into an iframe only when
 the user opens its live preview. Closing the preview unloads that iframe.
 

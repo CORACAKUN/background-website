@@ -40,6 +40,7 @@ const projects = [
   ["Circuit Board", "circuit-board", "geometry", "#5dffb0", "#2a745d"],
   ["Weather System", "weather-system", "nature", "#91c8ed", "#4b647e"],
   ["Portal Distortion", "portal-distortion", "space", "#ffad63", "#7e4cff"],
+  ["Motherboard Network", "motherboard-network", "geometry", "#5dffb0", "#28896a"],
 ].map(([name, slug, category, accent, accent2], index) => ({
   name,
   slug,
@@ -77,7 +78,7 @@ function cardMarkup(project) {
       style="--accent:${project.accent};--accent-2:${project.accent2};--index:${project.index}"
     >
       <div class="card-art">
-        <span class="card-index">${number} / 41</span>
+        <span class="card-index">${number} / ${projects.length}</span>
         <span class="card-play">↗</span>
       </div>
       <div class="card-info">
