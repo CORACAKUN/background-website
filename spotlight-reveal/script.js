@@ -1,1 +1,23 @@
-const mask=document.querySelector(".mask");let x=innerWidth*.72,y=innerHeight*.43,tx=x,ty=y;addEventListener("pointermove",e=>{tx=e.clientX;ty=e.clientY});addEventListener("touchmove",e=>{const t=e.touches[0];if(t){tx=t.clientX;ty=t.clientY}},{passive:true});function loop(){x+=(tx-x)*.12;y+=(ty-y)*.12;mask.style.setProperty("--x",`${x}px`);mask.style.setProperty("--y",`${y}px`);requestAnimationFrame(loop)}loop();
+const mask=document.querySelector(".mask");
+let x=innerWidth*.72, y=innerHeight*.43, tx=x, ty=y;
+addEventListener("pointermove", e=> {
+  tx=e.clientX;
+  ty=e.clientY
+});
+addEventListener("touchmove", e=> {
+  const t=e.touches[0];
+  if(t) {
+    tx=t.clientX;
+    ty=t.clientY
+  }
+}, {
+  passive:true
+});
+function loop() {
+  x+=(tx-x)*.12;
+  y+=(ty-y)*.12;
+  mask.style.setProperty("--x", `${x}px`);
+  mask.style.setProperty("--y", `${y}px`);
+  requestAnimationFrame(loop)
+}
+loop();

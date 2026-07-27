@@ -1,1 +1,82 @@
-*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{background:#010806;color:#ebfff6;font-family:Inter,system-ui,sans-serif}canvas{position:fixed;inset:0;width:100%;height:100%}main{position:relative;z-index:1;display:flex;min-height:100svh;width:min(800px,90%);padding:7vw;flex-direction:column;justify-content:center;pointer-events:none}small{color:#50f0a2;font-size:10px;font-weight:700;letter-spacing:.2em}h1{margin:28px 0 0;font-size:clamp(58px,8.7vw,128px);font-weight:430;letter-spacing:-.07em;line-height:.83}em{color:#52eea3;font-family:Georgia,serif;font-weight:400}p{max-width:420px;margin:34px 0;color:rgba(215,255,237,.44);font-size:clamp(14px,1.4vw,17px);line-height:1.7}.status{position:fixed;right:4vw;bottom:4vw;color:rgba(210,255,235,.3);font-size:9px;letter-spacing:.16em}.status i{display:inline-block;width:5px;height:5px;margin-left:7px;border-radius:50%;background:#51f0a3;box-shadow:0 0 8px #51f0a3}@media(max-width:640px){main{justify-content:flex-end;padding:24px 24px 92px}h1{font-size:17vw}}
+* {
+  box-sizing:border-box
+}
+html,body {
+  margin:0;
+  width:100%;
+  height:100%;
+  overflow:hidden
+}
+body {
+  background:#010806;
+  color:#ebfff6;
+  font-family:Inter,system-ui,sans-serif
+}
+canvas {
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%
+}
+main {
+  position:relative;
+  z-index:1;
+  display:flex;
+  min-height:100svh;
+  width:min(800px,90%);
+  padding:7vw;
+  flex-direction:column;
+  justify-content:center;
+  pointer-events:none
+}
+small {
+  color:#50f0a2;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.2em
+}
+h1 {
+  margin:28px 0 0;
+  font-size:clamp(58px,8.7vw,128px);
+  font-weight:430;
+  letter-spacing:-.07em;
+  line-height:.83
+}
+em {
+  color:#52eea3;
+  font-family:Georgia,serif;
+  font-weight:400
+}
+p {
+  max-width:420px;
+  margin:34px 0;
+  color:rgba(215,255,237,.44);
+  font-size:clamp(14px,1.4vw,17px);
+  line-height:1.7
+}
+.status {
+  position:fixed;
+  right:4vw;
+  bottom:4vw;
+  color:rgba(210,255,235,.3);
+  font-size:9px;
+  letter-spacing:.16em
+}
+.status i {
+  display:inline-block;
+  width:5px;
+  height:5px;
+  margin-left:7px;
+  border-radius:50%;
+  background:#51f0a3;
+  box-shadow:0 0 8px #51f0a3
+}
+@media(max-width:640px) {
+  main {
+    justify-content:flex-end;
+    padding:24px 24px 92px
+  }
+  h1 {
+    font-size:17vw
+  }
+}

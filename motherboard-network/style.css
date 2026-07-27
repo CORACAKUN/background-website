@@ -1,37 +1,28 @@
 :root {
   color-scheme: dark;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #effff9;
   background: #03100d;
 }
-
 * {
   box-sizing: border-box;
 }
-
-html,
-body {
+html, body {
   width: 100%;
   min-height: 100%;
   margin: 0;
 }
-
 body {
   min-height: 100svh;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 68% 48%, rgba(38, 220, 139, 0.09), transparent 31%),
-    #03100d;
+  background: radial-gradient(circle at 68% 48%, rgba(38, 220, 139, 0.09), transparent 31%), #03100d;
 }
-
 #board {
   position: fixed;
   inset: 0;
   width: 100%;
   height: 100%;
 }
-
 main {
   position: relative;
   z-index: 1;
@@ -43,7 +34,6 @@ main {
   padding: clamp(30px, 7vw, 105px);
   pointer-events: none;
 }
-
 .eyebrow {
   display: flex;
   align-items: center;
@@ -55,7 +45,6 @@ main {
   letter-spacing: 0.19em;
   text-transform: uppercase;
 }
-
 .eyebrow span {
   width: 18px;
   height: 5px;
@@ -63,7 +52,6 @@ main {
   background: #5dffb0;
   box-shadow: 0 0 14px rgba(93, 255, 176, 0.7);
 }
-
 h1 {
   margin: 0;
   font-size: clamp(58px, 8.5vw, 126px);
@@ -71,13 +59,11 @@ h1 {
   letter-spacing: -0.07em;
   line-height: 0.83;
 }
-
 h1 em {
   color: #5dffb0;
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
 }
-
 p {
   max-width: 485px;
   margin: 35px 0 0;
@@ -85,7 +71,6 @@ p {
   font-size: clamp(14px, 1.35vw, 17px);
   line-height: 1.7;
 }
-
 .system-status {
   position: fixed;
   right: clamp(22px, 4vw, 58px);
@@ -96,12 +81,10 @@ p {
   gap: 15px;
   pointer-events: none;
 }
-
 .system-status div {
   display: grid;
   gap: 3px;
 }
-
 .system-status span {
   color: rgba(215, 255, 238, 0.28);
   font-size: 7px;
@@ -109,20 +92,17 @@ p {
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
-
 .system-status strong {
   color: rgba(215, 255, 238, 0.72);
   font: 9px "Courier New", monospace;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-
 .system-status i {
   width: 1px;
   height: 25px;
   background: rgba(215, 255, 238, 0.12);
 }
-
 .telemetry {
   position: fixed;
   right: clamp(144px, 14vw, 260px);
@@ -137,7 +117,6 @@ p {
   backdrop-filter: blur(12px);
   pointer-events: none;
 }
-
 .telemetry-head {
   display: flex;
   align-items: center;
@@ -149,7 +128,6 @@ p {
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
-
 .telemetry-head i {
   width: 5px;
   height: 5px;
@@ -157,7 +135,6 @@ p {
   background: #5dffb0;
   box-shadow: 0 0 10px #5dffb0;
 }
-
 .metric {
   display: grid;
   grid-template-columns: 30px 1fr 30px;
@@ -166,22 +143,17 @@ p {
   height: 28px;
   border-top: 1px solid rgba(108, 239, 173, 0.07);
 }
-
-.metric > span,
-.metric > strong {
+.metric > span, .metric > strong {
   padding-bottom: 5px;
   font: 7px "Courier New", monospace;
 }
-
 .metric > span {
   color: rgba(215, 255, 238, 0.38);
 }
-
 .metric > strong {
   color: rgba(215, 255, 238, 0.76);
   text-align: right;
 }
-
 .sparkline {
   display: flex;
   align-items: end;
@@ -189,7 +161,6 @@ p {
   height: 20px;
   padding-bottom: 5px;
 }
-
 .sparkline i {
   width: 3px;
   height: 100%;
@@ -200,7 +171,6 @@ p {
   transition: transform 220ms ease;
   will-change: transform;
 }
-
 .interaction-hint {
   position: fixed;
   right: clamp(22px, 4vw, 58px);
@@ -213,34 +183,28 @@ p {
   text-transform: uppercase;
   pointer-events: none;
 }
-
 @media (max-width: 720px) {
   main {
     justify-content: flex-end;
     padding: 0 24px 92px;
   }
-
   h1 {
     font-size: clamp(52px, 17vw, 78px);
   }
-
   .system-status {
     display: none;
   }
-
   .telemetry {
     top: 12px;
     right: 64px;
     width: 185px;
     padding: 10px 12px;
   }
-
   .metric {
     grid-template-columns: 25px 1fr 26px;
     gap: 5px;
     height: 23px;
   }
-
   .interaction-hint {
     display: none;
   }

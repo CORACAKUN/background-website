@@ -1,1 +1,35 @@
-let c=document.querySelector("canvas"),g=c.getContext("2d"),w,h,t=0,m={x:0,y:0};onresize=()=>{w=c.width=innerWidth;h=c.height=innerHeight};onpointermove=e=>{m.x=e.x;m.y=e.y};function f(){let z=g.createLinearGradient(0,0,0,h);z.addColorStop(0,"#075b78");z.addColorStop(1,"#021e35");g.fillStyle=z;g.fillRect(0,0,w,h);g.globalCompositeOperation="screen";for(let j=0;j<24;j++){g.beginPath();for(let x=0;x<w;x+=12){let d=Math.hypot(x-m.x,j*h/23-m.y),y=j*h/23+Math.sin(x*.018+t*.025+j)*13+Math.sin(x*.007-t*.018)*20+(d<180?Math.sin(d*.08-t*.1)*18*(1-d/180):0);x?g.lineTo(x,y):g.moveTo(x,y)}g.strokeStyle="rgba(135,245,255,.13)";g.lineWidth=5;g.stroke()}g.globalCompositeOperation="source-over";t++;requestAnimationFrame(f)}onresize();f();
+let c=document.querySelector("canvas"), g=c.getContext("2d"), w, h, t=0, m= {
+  x:0,
+  y:0
+};
+onresize=()=> {
+  w=c.width=innerWidth;
+  h=c.height=innerHeight
+};
+onpointermove=e=> {
+  m.x=e.x;
+  m.y=e.y
+};
+function f() {
+  let z=g.createLinearGradient(0, 0, 0, h);
+  z.addColorStop(0, "#075b78");
+  z.addColorStop(1, "#021e35");
+  g.fillStyle=z;
+  g.fillRect(0, 0, w, h);
+  g.globalCompositeOperation="screen";
+  for(let j=0;j<24;j++) {
+    g.beginPath();
+    for(let x=0;x<w;x+=12) {
+      let d=Math.hypot(x-m.x, j*h/23-m.y), y=j*h/23+Math.sin(x*.018+t*.025+j)*13+Math.sin(x*.007-t*.018)*20+(d<180?Math.sin(d*.08-t*.1)*18*(1-d/180):0);
+      x?g.lineTo(x, y):g.moveTo(x, y)
+    }
+    g.strokeStyle="rgba(135,245,255,.13)";
+    g.lineWidth=5;
+    g.stroke()
+  }
+  g.globalCompositeOperation="source-over";
+  t++;
+  requestAnimationFrame(f)
+}
+onresize();
+f();

@@ -2,14 +2,11 @@
   const STORAGE_KEY = "fields.trace.enabled";
   const root = document.documentElement;
   const originalFillRect = CanvasRenderingContext2D.prototype.fillRect;
-
   let traceEnabled = localStorage.getItem(STORAGE_KEY) === "true";
-
   function syncState() {
     root.dataset.trace = traceEnabled ? "on" : "off";
     window.fieldTraceEnabled = traceEnabled;
   }
-
   function getCanvasSize(ctx) {
     const canvas = ctx.canvas;
     return {
@@ -17,28 +14,16 @@
       height: canvas.height || canvas.clientHeight,
     };
   }
-
   function isTransparentFullCanvasWipe(ctx, x, y, width, height) {
     const size = getCanvasSize(ctx);
-    return (
-      !traceEnabled &&
-      x === 0 &&
-      y === 0 &&
-      width >= size.width &&
-      height >= size.height &&
-      typeof ctx.fillStyle === "string" &&
-      /rgba?\([^)]*,\s*(0?\.\d+|0)\s*\)$/i.test(ctx.fillStyle)
-    );
+    return (!traceEnabled && x === 0 && y === 0 && width >= size.width && height >= size.height && typeof ctx.fillStyle === "string" && /rgba?\([^)]*, \s*(0?\.\d+|0)\s*\)$/i.test(ctx.fillStyle) );
   }
-
   function makeOpaque(fillStyle) {
     const rgba = fillStyle.match(/^rgba?\((.*)\)$/i);
     if (!rgba) return fillStyle;
-
     const parts = rgba[1].split(",").map((part) => part.trim());
     return `rgb(${parts[0]}, ${parts[1]}, ${parts[2]})`;
   }
-
   CanvasRenderingContext2D.prototype.fillRect = function (x, y, width, height) {
     if (isTransparentFullCanvasWipe(this, x, y, width, height)) {
       const previous = this.fillStyle;
@@ -47,24 +32,20 @@
       this.fillStyle = previous;
       return;
     }
-
     originalFillRect.call(this, x, y, width, height);
   };
-
   function addToggle() {
     const button = document.createElement("button");
     button.className = "trace-toggle";
     button.type = "button";
     button.setAttribute("aria-pressed", String(traceEnabled));
     button.innerHTML = "<span></span><b>Trace</b>";
-
     button.addEventListener("click", () => {
       traceEnabled = !traceEnabled;
       localStorage.setItem(STORAGE_KEY, String(traceEnabled));
       button.setAttribute("aria-pressed", String(traceEnabled));
       syncState();
     });
-
     const style = document.createElement("style");
     style.textContent = `
       .trace-toggle {
@@ -114,16 +95,16 @@
         }
       }
     `;
-
     document.head.append(style);
     document.body.append(button);
   }
-
   syncState();
-
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", addToggle, { once: true });
-  } else {
+    document.addEventListener("DOMContentLoaded", addToggle, {
+      once: true
+    });
+  }
+  else {
     addToggle();
   }
 })();
