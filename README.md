@@ -277,6 +277,5 @@ costs. Particle counts and grid density are also responsive where appropriate.
 
 ## License
 
-No license has been assigned yet. Add a `LICENSE` file before distributing or
-reusing the collection outside this repository.
+opensource
 
