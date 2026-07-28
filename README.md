@@ -1,6 +1,6 @@
 # Fields
 
-**Fields** is a curated gallery of 42 interactive and generative web
+**Fields** is a curated gallery of 51 interactive and generative web
 backgrounds. Every experiment is built with plain HTML, CSS, and JavaScript,
 with no framework or build step required.
 
@@ -78,6 +78,8 @@ interaction.
 | [Flow Field](flow-field/) | Particles traveling through an invisible vector current |
 | [Digital Rain](digital-rain/) | A falling symbol stream that parts around the cursor |
 | [Magnetic Typography](magnetic-typography/) | Floating letters drawn into cursor-centered arrangements |
+| [Atomic Orbitals](atomic-orbitals/) | Interactive electrons orbiting responsive atomic nuclei |
+| [Nuclear Fission](nuclear-fission/) | A particle-based visualization of splitting atomic nuclei |
 
 ### Fluid
 
@@ -103,6 +105,10 @@ interaction.
 | [Generative Kaleidoscope](generative-kaleidoscope/) | Twelve-fold mirrored geometry controlled by movement |
 | [Circuit Board](circuit-board/) | Electrical packets routing across a living circuit |
 | [Motherboard Network](motherboard-network/) | A central CPU exchanging live data with GPU, RAM, NVMe, power, chipset, and I/O |
+| [Cyberpunk Road](cyberpunk-road/) | An endless neon highway with steering and hold-to-boost overdrive |
+| [Radar System](radar-system/) | A tactical rotating sweep with moving contacts, echoes, and placed waypoints |
+| [Analog Control System](analog-control-system/) | A complete control deck with gauges, digital displays, lights, switches, buttons, gyro, level, and power lever |
+| [Live Speedometer](live-speedometer/) | A live speed and RPM simulation with six automatic gears and visible shifts |
 
 ### Nature
 
@@ -116,6 +122,7 @@ interaction.
 | [Crystal Growth](crystal-growth/) | Branching mineral structures seeded by clicks |
 | [Paper Cut Layers](paper-cut-layers/) | A layered landscape with pointer-driven parallax |
 | [Weather System](weather-system/) | Interactive wind, rain, atmosphere, and lightning |
+| [Interactive Butterflies](interactive-butterflies/) | A curious butterfly swarm with gathering, scattering, and pollen trails |
 
 ### Space
 
@@ -128,6 +135,7 @@ interaction.
 | [Cosmic Dust](cosmic-dust/) | Colored nebula particles curling into the cursor wake |
 | [Northern Star Map](northern-star-map/) | A rotating labeled sky with pointer parallax |
 | [Portal Distortion](portal-distortion/) | A movable portal revealing another animated world |
+| [Digital Globe](digital-globe/) | A rotating connected world with city nodes and live data routes |
 
 ### Light
 
@@ -140,6 +148,7 @@ interaction.
 | [Lightning Network](lightning-network/) | Electrical branches that search for the pointer |
 | [Water Caustics](water-caustics/) | Refracted light bands moving across an aquatic surface |
 | [Audio Visualizer](audio-visualizer/) | A circular field driven by ambient motion or microphone input |
+| [Nuclear Fusion](nuclear-fusion/) | Luminous nuclei merging into a high-energy fusion reaction |
 
 ## Project structure
 
@@ -269,7 +278,7 @@ Descriptive page text remains available above each canvas.
 
 ## Performance notes
 
-The gallery uses generated CSS artwork for its cards instead of running 42
+The gallery uses generated CSS artwork for its cards instead of running 51
 canvas simulations at once. A background is loaded into an iframe only when
 the user opens its live preview. Closing the preview unloads that iframe.
 
