@@ -1,6 +1,6 @@
 # Fields
 
-**Fields** is a curated gallery of 52 interactive and generative web
+**Fields** is a curated gallery of 58 interactive and generative web
 backgrounds. Every experiment is built with plain HTML, CSS, and JavaScript,
 with no framework or build step required.
 
@@ -109,6 +109,12 @@ interaction.
 | [Radar System](radar-system/) | A tactical rotating sweep with moving contacts, echoes, and placed waypoints |
 | [Analog Control System](analog-control-system/) | A complete control deck with gauges, digital displays, lights, switches, buttons, gyro, level, and power lever |
 | [Live Speedometer](live-speedometer/) | A live speed and RPM simulation with six automatic gears and visible shifts |
+| [Architectural Blueprint](architectural-blueprint/) | A living floor plan with dimensions, drafting cursor, and placed structural columns |
+| [Parametric Facade](parametric-facade/) | A building-skin grid that bends dynamically around environmental pressure |
+| [Isometric City](isometric-city/) | An endless field of animated architectural massing |
+| [Piston Engine](piston-engine/) | A synchronized four-cylinder crankshaft and combustion cycle |
+| [Turbine Flow](turbine-flow/) | A boostable turbine cutaway with rotating blades and airflow particles |
+| [Mechanical Linkage](mechanical-linkage/) | Connected flywheels, cams, and rods transferring continuous motion |
 
 ### Nature
 
@@ -279,7 +285,7 @@ Descriptive page text remains available above each canvas.
 
 ## Performance notes
 
-The gallery uses generated CSS artwork for its cards instead of running 52
+The gallery uses generated CSS artwork for its cards instead of running 58
 canvas simulations at once. A background is loaded into an iframe only when
 the user opens its live preview. Closing the preview unloads that iframe.
 

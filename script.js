@@ -50,6 +50,54 @@ projects.push({
   accent2: "#667a5b",
   index: projects.length + 1,
 });
+projects.push({
+  name: "Architectural Blueprint",
+  slug: "architectural-blueprint",
+  category: "geometry",
+  accent: "#75d5ff",
+  accent2: "#315b91",
+  index: projects.length + 1,
+});
+projects.push({
+  name: "Parametric Facade",
+  slug: "parametric-facade",
+  category: "geometry",
+  accent: "#3a7771",
+  accent2: "#a8b9ad",
+  index: projects.length + 1,
+});
+projects.push({
+  name: "Isometric City",
+  slug: "isometric-city",
+  category: "geometry",
+  accent: "#ffab69",
+  accent2: "#394854",
+  index: projects.length + 1,
+});
+projects.push({
+  name: "Piston Engine",
+  slug: "piston-engine",
+  category: "geometry",
+  accent: "#e5794c",
+  accent2: "#596166",
+  index: projects.length + 1,
+});
+projects.push({
+  name: "Turbine Flow",
+  slug: "turbine-flow",
+  category: "geometry",
+  accent: "#61d9ee",
+  accent2: "#315d78",
+  index: projects.length + 1,
+});
+projects.push({
+  name: "Mechanical Linkage",
+  slug: "mechanical-linkage",
+  category: "geometry",
+  accent: "#9d5537",
+  accent2: "#8d8a80",
+  index: projects.length + 1,
+});
 const gallery = document.querySelector("#gallery");
 const searchInput = document.querySelector("#search");
 const filters = document.querySelector("#filters");
