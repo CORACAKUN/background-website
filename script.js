@@ -42,6 +42,14 @@ projects.push({
   accent2: "#747d86",
   index: projects.length + 1,
 });
+projects.push({
+  name: "Contour Mountain Map",
+  slug: "contour-mountain-map",
+  category: "nature",
+  accent: "#a44f32",
+  accent2: "#667a5b",
+  index: projects.length + 1,
+});
 const gallery = document.querySelector("#gallery");
 const searchInput = document.querySelector("#search");
 const filters = document.querySelector("#filters");
