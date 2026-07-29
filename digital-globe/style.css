@@ -1,0 +1,179 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  color: #eefaff;
+  background: #02080d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100svh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 72% 48%, rgba(40, 183, 224, 0.08), transparent 33%),
+    #02080d;
+}
+
+#globe {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.atmosphere {
+  position: fixed;
+  right: 6%;
+  top: 50%;
+  width: min(52vw, 720px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(91, 221, 255, 0.05);
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 100px rgba(43, 193, 230, 0.025),
+    0 0 120px rgba(43, 193, 230, 0.025);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: min(90%, 820px);
+  min-height: 100svh;
+  padding: clamp(30px, 7vw, 105px);
+  pointer-events: none;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 29px;
+  color: rgba(213, 245, 255, 0.4);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.eyebrow span {
+  width: 7px;
+  height: 7px;
+  border: 1px solid #62e3ff;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 4px rgba(98, 227, 255, 0.06),
+    0 0 13px #62e3ff;
+}
+
+h1 {
+  max-width: 840px;
+  margin: 0;
+  font-size: clamp(58px, 8.4vw, 124px);
+  font-weight: 430;
+  letter-spacing: -0.07em;
+  line-height: 0.83;
+}
+
+h1 em {
+  color: #62e3ff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+p {
+  max-width: 470px;
+  margin: 35px 0 0;
+  color: rgba(213, 245, 255, 0.43);
+  font-size: clamp(14px, 1.35vw, 17px);
+  line-height: 1.7;
+}
+
+.network-status {
+  position: fixed;
+  right: clamp(22px, 4vw, 58px);
+  bottom: clamp(22px, 4vw, 46px);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  pointer-events: none;
+}
+
+.network-status div {
+  display: grid;
+  gap: 3px;
+}
+
+.network-status span {
+  color: rgba(213, 245, 255, 0.28);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.network-status strong {
+  color: rgba(213, 245, 255, 0.7);
+  font: 9px "Courier New", monospace;
+}
+
+.network-status i {
+  width: 1px;
+  height: 25px;
+  background: rgba(213, 245, 255, 0.12);
+}
+
+.coordinate-readout {
+  position: fixed;
+  right: clamp(22px, 4vw, 58px);
+  top: clamp(22px, 4vw, 46px);
+  z-index: 1;
+  display: flex;
+  gap: 15px;
+  color: rgba(213, 245, 255, 0.26);
+  font: 8px "Courier New", monospace;
+  letter-spacing: 0.1em;
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  main {
+    justify-content: flex-end;
+    padding: 0 24px 92px;
+  }
+
+  h1 {
+    font-size: clamp(52px, 16.5vw, 78px);
+  }
+
+  .network-status {
+    display: none;
+  }
+
+  .coordinate-readout {
+    top: 20px;
+    right: 20px;
+  }
+
+  .atmosphere {
+    right: -25%;
+    top: 34%;
+    width: 90vw;
+  }
+}

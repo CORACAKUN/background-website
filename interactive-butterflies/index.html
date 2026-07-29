@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An interactive garden of butterflies that gathers around your cursor."
+    />
+    <title>Interactive Butterflies</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="garden" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+
+    <main>
+      <div class="eyebrow"><span></span>Living garden 48</div>
+      <h1>Let them<br /><em>find you.</em></h1>
+      <p>
+        A garden alive with curious wings. Move gently to gather the swarm,
+        then press anywhere to send them fluttering into the air.
+      </p>
+    </main>
+
+    <aside class="garden-status" aria-hidden="true">
+      <div><span>Swarm</span><strong id="swarm-count">72 butterflies</strong></div>
+      <i></i>
+      <div><span>Behavior</span><strong id="behavior">Curious</strong></div>
+    </aside>
+
+    <div class="interaction-hint" aria-hidden="true">Hold — Scatter</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

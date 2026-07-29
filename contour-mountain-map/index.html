@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An interactive flat map of mountains drawn with animated contour rings."
+    />
+    <title>Contour Mountain Map</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="map" aria-hidden="true"></canvas>
+    <div class="paper-grain" aria-hidden="true"></div>
+
+    <main>
+      <div class="eyebrow"><span></span>Terrain survey 52</div>
+      <h1>Read the<br /><em>mountains.</em></h1>
+      <p>
+        A flat landscape described only by elevation. Move to survey a new
+        peak and click anywhere to leave a permanent altitude marker.
+      </p>
+    </main>
+
+    <aside class="map-status" aria-hidden="true">
+      <div><span>Scale</span><strong>1 : 25 000</strong></div>
+      <i></i>
+      <div><span>Contour</span><strong>20 M</strong></div>
+      <i></i>
+      <div><span>Elevation</span><strong id="elevation">0000 M</strong></div>
+    </aside>
+
+    <div class="map-coordinates" aria-hidden="true">
+      <span id="northing">N 000000</span>
+      <span id="easting">E 000000</span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
