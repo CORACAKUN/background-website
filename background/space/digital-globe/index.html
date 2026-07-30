@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An interactive digital globe with live connections moving around the world."
+    />
+    <title>Digital Globe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="globe" aria-hidden="true"></canvas>
+    <div class="atmosphere" aria-hidden="true"></div>
+
+    <main>
+      <div class="eyebrow"><span></span>Global network 47</div>
+      <h1>One world.<br /><em>Always moving.</em></h1>
+      <p>
+        A living network wrapped around the planet. Move to rotate the globe
+        and watch data travel between connected cities.
+      </p>
+    </main>
+
+    <aside class="network-status" aria-hidden="true">
+      <div><span>Nodes online</span><strong>09 / 09</strong></div>
+      <i></i>
+      <div><span>Global latency</span><strong id="latency">28 MS</strong></div>
+    </aside>
+
+    <div class="coordinate-readout" aria-hidden="true">
+      <span id="latitude">LAT 00.00</span>
+      <span id="longitude">LON 00.00</span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  color: #f7f9fb;
+  background: #050608;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100svh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 72% 48%, rgba(232, 54, 60, 0.07), transparent 34%),
+    #050608;
+}
+
+#dashboard {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.motion-blur {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(5, 6, 8, 0.35),
+    transparent 48%,
+    rgba(5, 6, 8, 0.08)
+  );
+  pointer-events: none;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: min(90%, 810px);
+  min-height: 100svh;
+  padding: clamp(30px, 7vw, 105px);
+  pointer-events: none;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 29px;
+  color: rgba(237, 241, 246, 0.4);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.eyebrow span {
+  width: 20px;
+  height: 3px;
+  background: #ef4248;
+  box-shadow: 0 0 12px #ef4248;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(58px, 8.6vw, 128px);
+  font-weight: 430;
+  letter-spacing: -0.07em;
+  line-height: 0.83;
+}
+
+h1 em {
+  color: #ef4248;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+p {
+  max-width: 480px;
+  margin: 35px 0 0;
+  color: rgba(237, 241, 246, 0.42);
+  font-size: clamp(14px, 1.35vw, 17px);
+  line-height: 1.7;
+}
+
+.drive-data {
+  position: fixed;
+  right: clamp(22px, 4vw, 58px);
+  bottom: clamp(22px, 4vw, 46px);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  pointer-events: none;
+}
+
+.drive-data div {
+  display: grid;
+  gap: 3px;
+}
+
+.drive-data span {
+  color: rgba(237, 241, 246, 0.27);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.drive-data strong {
+  color: rgba(237, 241, 246, 0.72);
+  font: 9px "Courier New", monospace;
+  text-transform: uppercase;
+}
+
+.drive-data i {
+  width: 1px;
+  height: 25px;
+  background: rgba(237, 241, 246, 0.12);
+}
+
+.throttle-hint {
+  position: fixed;
+  right: clamp(22px, 4vw, 58px);
+  top: clamp(22px, 4vw, 46px);
+  z-index: 2;
+  color: rgba(237, 241, 246, 0.28);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  main {
+    justify-content: flex-end;
+    padding: 0 24px 92px;
+  }
+
+  h1 {
+    font-size: clamp(52px, 17vw, 80px);
+  }
+
+  .drive-data {
+    top: 20px;
+    right: 20px;
+    bottom: auto;
+  }
+
+  .throttle-hint {
+    display: none;
+  }
+}

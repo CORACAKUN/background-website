@@ -1,0 +1,172 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  color: #eafff1;
+  background: #020b07;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100svh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 72% 48%, rgba(51, 222, 123, 0.065), transparent 34%),
+    #020b07;
+}
+
+#radar {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.screen-noise {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.12;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 3px,
+      rgba(84, 255, 153, 0.04) 4px
+    );
+  pointer-events: none;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: min(90%, 820px);
+  min-height: 100svh;
+  padding: clamp(30px, 7vw, 105px);
+  pointer-events: none;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 29px;
+  color: rgba(215, 255, 228, 0.4);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.eyebrow span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #53ff98;
+  box-shadow:
+    0 0 0 5px rgba(83, 255, 152, 0.06),
+    0 0 14px #53ff98;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(58px, 8.4vw, 126px);
+  font-weight: 430;
+  letter-spacing: -0.07em;
+  line-height: 0.83;
+}
+
+h1 em {
+  color: #53ff98;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+p {
+  max-width: 480px;
+  margin: 35px 0 0;
+  color: rgba(215, 255, 228, 0.43);
+  font-size: clamp(14px, 1.35vw, 17px);
+  line-height: 1.7;
+}
+
+.radar-status {
+  position: fixed;
+  right: clamp(22px, 4vw, 58px);
+  bottom: clamp(22px, 4vw, 46px);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  pointer-events: none;
+}
+
+.radar-status div {
+  display: grid;
+  gap: 3px;
+}
+
+.radar-status span {
+  color: rgba(215, 255, 228, 0.27);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.radar-status strong {
+  color: rgba(215, 255, 228, 0.72);
+  font: 9px "Courier New", monospace;
+  text-transform: uppercase;
+}
+
+.radar-status i {
+  width: 1px;
+  height: 25px;
+  background: rgba(215, 255, 228, 0.12);
+}
+
+.coordinates {
+  position: fixed;
+  right: clamp(22px, 4vw, 58px);
+  top: clamp(22px, 4vw, 46px);
+  z-index: 2;
+  display: flex;
+  gap: 17px;
+  color: rgba(215, 255, 228, 0.28);
+  font: 8px "Courier New", monospace;
+  letter-spacing: 0.11em;
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  main {
+    justify-content: flex-end;
+    padding: 0 24px 92px;
+  }
+
+  h1 {
+    font-size: clamp(52px, 17vw, 80px);
+  }
+
+  .radar-status {
+    display: none;
+  }
+
+  .coordinates {
+    top: 20px;
+    right: 20px;
+  }
+}

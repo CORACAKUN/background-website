@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A live speedometer simulation with automatic gears and animated shift events."
+    />
+    <title>Live Speedometer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="dashboard" aria-hidden="true"></canvas>
+    <div class="motion-blur" aria-hidden="true"></div>
+
+    <main>
+      <div class="eyebrow"><span></span>Dynamic drive 51</div>
+      <h1>Feel every<br /><em>shift.</em></h1>
+      <p>
+        A live drivetrain cycling through speed, RPM, and six automatic gears.
+        Move to set the pace and hold anywhere to open the throttle.
+      </p>
+    </main>
+
+    <aside class="drive-data" aria-hidden="true">
+      <div><span>Mode</span><strong>Sport+</strong></div>
+      <i></i>
+      <div><span>Transmission</span><strong id="transmission">Automatic</strong></div>
+    </aside>
+
+    <div class="throttle-hint" aria-hidden="true">Hold — Full throttle</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 # Fields
 
-**Fields** is a curated gallery of 48 interactive and generative web
+**Fields** is a curated gallery of 61 interactive and generative web
 backgrounds. Every experiment is built with plain HTML, CSS, and JavaScript,
 with no framework or build step required.
 
@@ -78,6 +78,10 @@ interaction.
 | [Flow Field](background/particles/flow-field/) | Particles traveling through an invisible vector current |
 | [Digital Rain](background/particles/digital-rain/) | A falling symbol stream that parts around the cursor |
 | [Magnetic Typography](background/particles/magnetic-typography/) | Floating letters drawn into cursor-centered arrangements |
+| [Atomic Orbitals](background/particles/atomic-orbitals/) | Interactive electrons orbiting responsive atomic nuclei |
+| [Nuclear Fission](background/particles/nuclear-fission/) | A particle-based visualization of splitting atomic nuclei |
+| [Matrix Code](background/particles/matrix-code/) | width=device-width, initial-scale=1 |
+| [Hacker Simulation](background/particles/hacker-simulation/) | width=device-width, initial-scale=1 |
 
 ### Fluid
 
@@ -103,6 +107,16 @@ interaction.
 | [Generative Kaleidoscope](background/geometry/generative-kaleidoscope/) | Twelve-fold mirrored geometry controlled by movement |
 | [Circuit Board](background/geometry/circuit-board/) | Electrical packets routing across a living circuit |
 | [Motherboard Network](background/geometry/motherboard-network/) | A central CPU exchanging live data with GPU, RAM, NVMe, power, chipset, and I/O |
+| [Cyberpunk Road](background/geometry/cyberpunk-road/) | An endless neon highway with steering and hold-to-boost overdrive |
+| [Radar System](background/geometry/radar-system/) | A tactical rotating sweep with moving contacts, echoes, and placed waypoints |
+| [Analog Control System](background/geometry/analog-control-system/) | A complete control deck with gauges, digital displays, lights, switches, buttons, gyro, level, and power lever |
+| [Live Speedometer](background/geometry/live-speedometer/) | A live speed and RPM simulation with six automatic gears and visible shifts |
+| [Architectural Blueprint](background/geometry/architectural-blueprint/) | A living floor plan with dimensions, drafting cursor, and placed structural columns |
+| [Parametric Facade](background/geometry/parametric-facade/) | A building-skin grid that bends dynamically around environmental pressure |
+| [Isometric City](background/geometry/isometric-city/) | An endless field of animated architectural massing |
+| [Piston Engine](background/geometry/piston-engine/) | A synchronized four-cylinder crankshaft and combustion cycle |
+| [Turbine Flow](background/geometry/turbine-flow/) | A boostable turbine cutaway with rotating blades and airflow particles |
+| [Mechanical Linkage](background/geometry/mechanical-linkage/) | Connected flywheels, cams, and rods transferring continuous motion |
 
 ### Nature
 
@@ -116,6 +130,8 @@ interaction.
 | [Crystal Growth](background/nature/crystal-growth/) | Branching mineral structures seeded by clicks |
 | [Paper Cut Layers](background/nature/paper-cut-layers/) | A layered landscape with pointer-driven parallax |
 | [Weather System](background/nature/weather-system/) | Interactive wind, rain, atmosphere, and lightning |
+| [Interactive Butterflies](background/nature/interactive-butterflies/) | A curious butterfly swarm with gathering, scattering, and pollen trails |
+| [Contour Mountain Map](background/nature/contour-mountain-map/) | A flat cartographic landscape of nested mountain contours and survey markers |
 
 ### Space
 
@@ -128,6 +144,7 @@ interaction.
 | [Cosmic Dust](background/space/cosmic-dust/) | Colored nebula particles curling into the cursor wake |
 | [Northern Star Map](background/space/northern-star-map/) | A rotating labeled sky with pointer parallax |
 | [Portal Distortion](background/space/portal-distortion/) | A movable portal revealing another animated world |
+| [Digital Globe](background/space/digital-globe/) | A rotating connected world with city nodes and live data routes |
 
 ### Light
 
@@ -140,6 +157,8 @@ interaction.
 | [Lightning Network](background/light/lightning-network/) | Electrical branches that search for the pointer |
 | [Water Caustics](background/light/water-caustics/) | Refracted light bands moving across an aquatic surface |
 | [Audio Visualizer](background/light/audio-visualizer/) | A circular field driven by ambient motion or microphone input |
+| [Nuclear Fusion](background/light/nuclear-fusion/) | Luminous nuclei merging into a high-energy fusion reaction |
+| [Shockwave Explosion](background/light/shockwave-explosion/) | width=device-width, initial-scale=1 |
 
 ## Project structure
 
@@ -272,7 +291,7 @@ Descriptive page text remains available above each canvas.
 
 ## Performance notes
 
-The gallery uses generated CSS artwork for its cards instead of running 48
+The gallery uses generated CSS artwork for its cards instead of running 61
 canvas simulations at once. A background is loaded into an iframe only when
 the user opens its live preview. Closing the preview unloads that iframe.
 
