@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+    name="description"
+    content="An interactive motherboard network with live data flowing between connected components."
+    />
+    <title>Motherboard Network</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="board" aria-hidden="true">
+    </canvas>
+    <main>
+      <div class="eyebrow">
+        <span>
+        </span>System architecture 42</div>
+        <h1>Every signal<br />
+        <em>connected.</em>
+      </h1>
+      <p>
+        A live motherboard built around its central processor. Hover a
+        component to inspect its connection, or click to increase its data
+        traffic.
+      </p>
+    </main>
+    <aside class="system-status" aria-hidden="true">
+      <div>
+        <span>System</span>
+        <strong>Online</strong>
+      </div>
+      <i>
+      </i>
+      <div>
+        <span>Bus activity</span>
+        <strong id="activity">62%</strong>
+      </div>
+    </aside>
+    <aside class="telemetry" aria-label="Simulated hardware usage">
+      <div class="telemetry-head">
+        <span>Live telemetry</span>
+        <i>
+        </i>
+      </div>
+      <div class="metric" data-metric="cpu">
+        <span>CPU</span>
+        <div class="sparkline">
+        </div>
+        <strong>42%</strong>
+      </div>
+      <div class="metric" data-metric="gpu">
+        <span>GPU</span>
+        <div class="sparkline">
+        </div>
+        <strong>68%</strong>
+      </div>
+      <div class="metric" data-metric="ram">
+        <span>RAM</span>
+        <div class="sparkline">
+        </div>
+        <strong>54%</strong>
+      </div>
+      <div class="metric" data-metric="ssd">
+        <span>SSD</span>
+        <div class="sparkline">
+        </div>
+        <strong>31%</strong>
+      </div>
+      <div class="metric" data-metric="network">
+        <span>NET</span>
+        <div class="sparkline">
+        </div>
+        <strong>76%</strong>
+      </div>
+    </aside>
+    <!-- <div class="interaction-hint" aria-hidden="true">Hover / click component</div> -->
+    <script src="../../../../../trace-toggle.js">
+    </script>
+    <script src="script.js">
+    </script>
+  </body>
+</html>

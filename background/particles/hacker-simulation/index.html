@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A cinematic hacker simulation background with animated terminals, hashes, binary streams, and live graphs."
+    />
+    <title>Hacker Simulation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="network" aria-hidden="true"></canvas>
+    <div class="scan" aria-hidden="true"></div>
+
+    <main class="console-grid">
+      <section class="hero-terminal">
+        <div class="terminal-bar">
+          <span></span>
+          <span></span>
+          <span></span>
+          <b>root@fields:~/ops</b>
+        </div>
+        <div class="terminal-body" id="main-log"></div>
+      </section>
+
+      <aside class="side-stack">
+        <section class="panel">
+          <div class="panel-head">
+            <span>Entropy</span>
+            <b id="entropy-value">0x00</b>
+          </div>
+          <div class="hash-stream" id="hash-stream"></div>
+        </section>
+
+        <section class="panel compact">
+          <div class="panel-head">
+            <span>Packet Graph</span>
+            <b id="packet-rate">000 mb/s</b>
+          </div>
+          <div class="bars" id="bars"></div>
+        </section>
+      </aside>
+
+      <section class="code-panel">
+        <div class="panel-head">
+          <span>Generated Payload</span>
+          <b>read-only simulation</b>
+        </div>
+        <pre id="code-feed"></pre>
+      </section>
+
+      <section class="binary-panel">
+        <div class="panel-head">
+          <span>Binary Diff</span>
+          <b id="diff-count">0000</b>
+        </div>
+        <div id="binary-grid"></div>
+      </section>
+    </main>
+
+    <div class="identity">
+      <small>SIMULATION 48</small>
+      <strong>Hacker Simulation</strong>
+    </div>
+
+    <script src="../../../../../trace-toggle.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
