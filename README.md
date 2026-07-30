@@ -1,6 +1,6 @@
 # Fields
 
-**Fields** is a curated gallery of 42 interactive and generative web
+**Fields** is a curated gallery of 48 interactive and generative web
 backgrounds. Every experiment is built with plain HTML, CSS, and JavaScript,
 with no framework or build step required.
 
@@ -73,73 +73,73 @@ interaction.
 
 | Project | Description |
 | --- | --- |
-| [Dot Field](dot-field/) | A spring-loaded dot grid with repel and magnetize modes |
-| [Particle Trails](particle-trails/) | Light particles that paint fading cursor trails |
-| [Flow Field](flow-field/) | Particles traveling through an invisible vector current |
-| [Digital Rain](digital-rain/) | A falling symbol stream that parts around the cursor |
-| [Magnetic Typography](magnetic-typography/) | Floating letters drawn into cursor-centered arrangements |
+| [Dot Field](background/particles/dot-field/) | A spring-loaded dot grid with repel and magnetize modes |
+| [Particle Trails](background/particles/particle-trails/) | Light particles that paint fading cursor trails |
+| [Flow Field](background/particles/flow-field/) | Particles traveling through an invisible vector current |
+| [Digital Rain](background/particles/digital-rain/) | A falling symbol stream that parts around the cursor |
+| [Magnetic Typography](background/particles/magnetic-typography/) | Floating letters drawn into cursor-centered arrangements |
 
 ### Fluid
 
 | Project | Description |
 | --- | --- |
-| [Liquid Mesh](liquid-mesh/) | Blended color masses stretched by cursor motion |
-| [Ink Diffusion](ink-diffusion/) | Click-driven pigment blooms on a paper-like surface |
-| [Neon Fluid](neon-fluid/) | Luminous pigment stirred by fast gestures |
-| [Smoke Ribbons](smoke-ribbons/) | Soft volumetric trails folded through movement |
-| [Ferrofluid Spikes](ferrofluid-spikes/) | Magnetic liquid spikes aligned toward the pointer |
-| [Lava Lamp](lava-lamp/) | Warm, viscous blobs that rise, merge, and follow heat |
+| [Liquid Mesh](background/fluid/liquid-mesh/) | Blended color masses stretched by cursor motion |
+| [Ink Diffusion](background/fluid/ink-diffusion/) | Click-driven pigment blooms on a paper-like surface |
+| [Neon Fluid](background/fluid/neon-fluid/) | Luminous pigment stirred by fast gestures |
+| [Smoke Ribbons](background/fluid/smoke-ribbons/) | Soft volumetric trails folded through movement |
+| [Ferrofluid Spikes](background/fluid/ferrofluid-spikes/) | Magnetic liquid spikes aligned toward the pointer |
+| [Lava Lamp](background/fluid/lava-lamp/) | Warm, viscous blobs that rise, merge, and follow heat |
 
 ### Geometry
 
 | Project | Description |
 | --- | --- |
-| [Wave Grid](wave-grid/) | A dimensional grid with hover waves and click ripples |
-| [Elastic Fabric](elastic-fabric/) | A connected mesh that can be stretched and released |
-| [Pixel Displacement](pixel-displacement/) | A raster composition that scatters and reconstructs |
-| [Voronoi Cells](voronoi-cells/) | Organic cells that reorganize around the cursor |
-| [Kinetic Clockwork](kinetic-clockwork/) | Interconnected gears driven by cursor momentum |
-| [Hyperspace Lattice](hyperspace-lattice/) | A steerable rotating wireframe corridor |
-| [Generative Kaleidoscope](generative-kaleidoscope/) | Twelve-fold mirrored geometry controlled by movement |
-| [Circuit Board](circuit-board/) | Electrical packets routing across a living circuit |
-| [Motherboard Network](motherboard-network/) | A central CPU exchanging live data with GPU, RAM, NVMe, power, chipset, and I/O |
+| [Wave Grid](background/geometry/wave-grid/) | A dimensional grid with hover waves and click ripples |
+| [Elastic Fabric](background/geometry/elastic-fabric/) | A connected mesh that can be stretched and released |
+| [Pixel Displacement](background/geometry/pixel-displacement/) | A raster composition that scatters and reconstructs |
+| [Voronoi Cells](background/geometry/voronoi-cells/) | Organic cells that reorganize around the cursor |
+| [Kinetic Clockwork](background/geometry/kinetic-clockwork/) | Interconnected gears driven by cursor momentum |
+| [Hyperspace Lattice](background/geometry/hyperspace-lattice/) | A steerable rotating wireframe corridor |
+| [Generative Kaleidoscope](background/geometry/generative-kaleidoscope/) | Twelve-fold mirrored geometry controlled by movement |
+| [Circuit Board](background/geometry/circuit-board/) | Electrical packets routing across a living circuit |
+| [Motherboard Network](background/geometry/motherboard-network/) | A central CPU exchanging live data with GPU, RAM, NVMe, power, chipset, and I/O |
 
 ### Nature
 
 | Project | Description |
 | --- | --- |
-| [Firefly Garden](firefly-garden/) | A curious swarm of softly glowing insects |
-| [Topographic Map](topographic-map/) | Animated contour lines raised by the pointer |
-| [Sand Dunes](sand-dunes/) | Wind-shaped grains disturbed by movement |
-| [Reaction Diffusion](reaction-diffusion/) | A Gray–Scott-style organic pattern simulation |
-| [Bioluminescent Ocean](bioluminescent-ocean/) | Waves and glowing plankton awakened by motion |
-| [Crystal Growth](crystal-growth/) | Branching mineral structures seeded by clicks |
-| [Paper Cut Layers](paper-cut-layers/) | A layered landscape with pointer-driven parallax |
-| [Weather System](weather-system/) | Interactive wind, rain, atmosphere, and lightning |
+| [Firefly Garden](background/nature/firefly-garden/) | A curious swarm of softly glowing insects |
+| [Topographic Map](background/nature/topographic-map/) | Animated contour lines raised by the pointer |
+| [Sand Dunes](background/nature/sand-dunes/) | Wind-shaped grains disturbed by movement |
+| [Reaction Diffusion](background/nature/reaction-diffusion/) | A Gray–Scott-style organic pattern simulation |
+| [Bioluminescent Ocean](background/nature/bioluminescent-ocean/) | Waves and glowing plankton awakened by motion |
+| [Crystal Growth](background/nature/crystal-growth/) | Branching mineral structures seeded by clicks |
+| [Paper Cut Layers](background/nature/paper-cut-layers/) | A layered landscape with pointer-driven parallax |
+| [Weather System](background/nature/weather-system/) | Interactive wind, rain, atmosphere, and lightning |
 
 ### Space
 
 | Project | Description |
 | --- | --- |
-| [Constellation Field](constellation-field/) | Drifting stars with proximity-based connections |
-| [Gravity Well](gravity-well/) | Particles pulled into luminous cursor-centered orbits |
-| [Black Hole](black-hole/) | A chargeable singularity that consumes the field |
-| [Star Tunnel](star-tunnel/) | A steerable depth field with hold-to-warp acceleration |
-| [Cosmic Dust](cosmic-dust/) | Colored nebula particles curling into the cursor wake |
-| [Northern Star Map](northern-star-map/) | A rotating labeled sky with pointer parallax |
-| [Portal Distortion](portal-distortion/) | A movable portal revealing another animated world |
+| [Constellation Field](background/space/constellation-field/) | Drifting stars with proximity-based connections |
+| [Gravity Well](background/space/gravity-well/) | Particles pulled into luminous cursor-centered orbits |
+| [Black Hole](background/space/black-hole/) | A chargeable singularity that consumes the field |
+| [Star Tunnel](background/space/star-tunnel/) | A steerable depth field with hold-to-warp acceleration |
+| [Cosmic Dust](background/space/cosmic-dust/) | Colored nebula particles curling into the cursor wake |
+| [Northern Star Map](background/space/northern-star-map/) | A rotating labeled sky with pointer parallax |
+| [Portal Distortion](background/space/portal-distortion/) | A movable portal revealing another animated world |
 
 ### Light
 
 | Project | Description |
 | --- | --- |
-| [Interactive Noise](interactive-noise/) | A signal field warped like heat around the cursor |
-| [Aurora](aurora/) | Layered atmospheric ribbons leaning toward movement |
-| [Spotlight Reveal](spotlight-reveal/) | A cursor light exposing a hidden graphic composition |
-| [Glass Refraction](glass-refraction/) | A movable lens that magnifies and shifts the scene |
-| [Lightning Network](lightning-network/) | Electrical branches that search for the pointer |
-| [Water Caustics](water-caustics/) | Refracted light bands moving across an aquatic surface |
-| [Audio Visualizer](audio-visualizer/) | A circular field driven by ambient motion or microphone input |
+| [Interactive Noise](background/light/interactive-noise/) | A signal field warped like heat around the cursor |
+| [Aurora](background/light/aurora/) | Layered atmospheric ribbons leaning toward movement |
+| [Spotlight Reveal](background/light/spotlight-reveal/) | A cursor light exposing a hidden graphic composition |
+| [Glass Refraction](background/light/glass-refraction/) | A movable lens that magnifies and shifts the scene |
+| [Lightning Network](background/light/lightning-network/) | Electrical branches that search for the pointer |
+| [Water Caustics](background/light/water-caustics/) | Refracted light bands moving across an aquatic surface |
+| [Audio Visualizer](background/light/audio-visualizer/) | A circular field driven by ambient motion or microphone input |
 
 ## Project structure
 
@@ -149,21 +149,24 @@ background-website/
 ├── style.css                  # Gallery styles
 ├── script.js                  # Catalog, filters, search, and previews
 ├── README.md
-├── dot-field/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-├── wave-grid/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-└── ...                        # Remaining standalone experiments
+└── background/
+    ├── particles/
+    │   ├── dot-field/
+    │   │   ├── index.html
+    │   │   ├── style.css
+    │   │   └── script.js
+    │   └── ...
+    ├── fluid/
+    ├── geometry/
+    ├── nature/
+    ├── space/
+    └── light/
 ```
 
 Every background is independent and contains:
 
 ```text
-project-name/
+background/category/project-name/
 ├── index.html
 ├── style.css
 └── script.js
@@ -227,7 +230,7 @@ For better performance on lower-powered devices:
 
 ## Adding another background
 
-1. Create a kebab-case folder at the repository root.
+1. Create a kebab-case folder inside `background/<category>/`.
 2. Add `index.html`, `style.css`, and `script.js`.
 3. Ensure the experience fills the viewport and supports pointer input.
 4. Add a project entry to the `projects` array in the root `script.js`.
@@ -269,7 +272,7 @@ Descriptive page text remains available above each canvas.
 
 ## Performance notes
 
-The gallery uses generated CSS artwork for its cards instead of running 42
+The gallery uses generated CSS artwork for its cards instead of running 48
 canvas simulations at once. A background is loaded into an iframe only when
 the user opens its live preview. Closing the preview unloads that iframe.
 

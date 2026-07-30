@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+    name="description"
+    content="An interactive field of dots that bends away from your cursor."
+    />
+    <title>Dot Field</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="dot-field" aria-hidden="true">
+    </canvas>
+    <main>
+      <div class="eyebrow">
+        <span class="status-dot">
+        </span>
+        Interactive field
+      </div>
+      <h1>Move through<br />the <em>field.</em>
+    </h1>
+    <p>
+      A quiet grid of particles that gives way as you move. Glide your
+      cursor across the screen to disturb the surface.
+    </p>
+  </main>
+  <div class="hint" aria-hidden="true">
+    <span class="mouse">
+      <span>
+      </span>
+    </span>
+    Move to explore
+  </div>
+  <button class="mode-toggle" id="mode-toggle" type="button" aria-pressed="false">
+    <span class="mode-icon" aria-hidden="true">
+      <i>
+      </i>
+      <i>
+      </i>
+      <i>
+      </i>
+    </span>
+    <span>
+      <small>Interaction</small>
+      <strong id="mode-label">Repel</strong>
+    </span>
+  </button>
+  <script src="../../../trace-toggle.js">
+  </script>
+  <script src="script.js">
+  </script>
+</body>
+</html>
