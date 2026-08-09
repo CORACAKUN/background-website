@@ -67,7 +67,7 @@ function movePointer(x, y) {
   pointer.pulse = Math.min(1, pointer.pulse + 0.05);
 }
 
-function injectBurst(x, y) {
+function emitBurst(x, y) {
   bursts.push({
     x,
     y,
@@ -82,7 +82,7 @@ addEventListener("resize", resize);
 addEventListener("pointermove", (event) => movePointer(event.clientX, event.clientY));
 addEventListener("pointerdown", (event) => {
   movePointer(event.clientX, event.clientY);
-  injectBurst(event.clientX, event.clientY);
+  emitBurst(event.clientX, event.clientY);
 });
 addEventListener("blur", () => {
   pointer.active = false;
@@ -174,5 +174,5 @@ function loop() {
 }
 
 resize();
-injectBurst(width * 0.72, height * 0.42);
+emitBurst(width * 0.72, height * 0.42);
 loop();
