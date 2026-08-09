@@ -81,7 +81,7 @@ interaction.
 | [Atomic Orbitals](background/particles/atomic-orbitals/) | Interactive electrons orbiting responsive atomic nuclei |
 | [Nuclear Fission](background/particles/nuclear-fission/) | A particle-based visualization of splitting atomic nuclei |
 | [Matrix Code](background/particles/matrix-code/) | width=device-width, initial-scale=1 |
-| [Hacker Simulation](background/particles/hacker-simulation/) | width=device-width, initial-scale=1 |
+| [Network Monitor](background/particles/network-monitor/) | Animated terminals, packet streams, binary signals, and live graphs |
 
 ### Fluid
 

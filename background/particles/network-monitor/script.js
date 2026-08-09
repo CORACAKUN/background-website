@@ -11,7 +11,7 @@ const diffCount = document.querySelector("#diff-count");
 
 const verbs = [
   "mounting encrypted volume",
-  "rotating session token",
+  "rotating signal marker",
   "sampling entropy pool",
   "indexing packet headers",
   "forking sandbox process",
@@ -19,10 +19,10 @@ const verbs = [
   "validating checksum table",
   "compiling transient module",
   "mapping memory window",
-  "synchronizing ghost terminal",
+  "synchronizing signal terminal",
 ];
 
-const scopes = ["auth", "kernel", "proxy", "socket", "cipher", "cache", "daemon"];
+const scopes = ["route", "kernel", "proxy", "socket", "signal", "cache", "daemon"];
 const hex = "0123456789abcdef";
 const nodes = [];
 const packets = [];
@@ -181,7 +181,7 @@ function addLogLine() {
 function updateHashes() {
   entropyValue.textContent = `0x${randomHex(2).toUpperCase()}`;
   hashStream.innerHTML = Array.from({ length: 12 }, () => {
-    const kind = Math.random() > 0.5 ? "sha256" : "token";
+    const kind = Math.random() > 0.5 ? "checksum" : "marker";
     return `<span>${kind}:${randomHex(48)}</span>`;
   }).join("");
 }
@@ -196,11 +196,11 @@ function updateBars() {
 function updateCode() {
   const lines = [
     `const seed = "0x${randomHex(16)}";`,
-    `session.rotate("${randomHex(8)}:${randomHex(8)}");`,
+    `signal.rotate("${randomHex(8)}:${randomHex(8)}");`,
     `buffer.write(${randomBinary(12)}, 0b${randomBinary(8)});`,
     `graph.link("${randomHex(6)}", "${randomHex(6)}");`,
-    `cipher.mix([${randomHex(4)}, ${randomHex(4)}, ${randomHex(4)}]);`,
-    `await sandbox.exec("trace-${randomHex(5)}");`,
+    `signal.mix([${randomHex(4)}, ${randomHex(4)}, ${randomHex(4)}]);`,
+    `await sandbox.run("trace-${randomHex(5)}");`,
     `stream.patch(${Math.floor(random(1000, 9999))}, "${randomHex(10)}");`,
     `emit("heartbeat", { entropy: 0x${randomHex(2)} });`,
   ];
