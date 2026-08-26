@@ -89,7 +89,7 @@ p {
 }
 .mode-toggle {
   position: fixed;
-  top: clamp(22px, 4vw, 50px);
+  top: clamp(22px, 4vw, 60px);
   right: clamp(22px, 4vw, 60px);
   z-index: 2;
   display: flex;
