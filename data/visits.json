@@ -1,5 +1,5 @@
 {
-  "totalVisits": 13,
+  "totalVisits": 14,
   "backgrounds": {
     "constellation-field": {
       "title": "Constellation Field",
@@ -63,9 +63,32 @@
       "path": "/background/geometry/analog-control-system/index.html",
       "visits": 1,
       "lastVisitAt": "2026-08-26T16:52:25.989Z"
+    },
+    "live-speedometer": {
+      "title": "Live Speedometer",
+      "category": "geometry",
+      "path": "/background/geometry/live-speedometer/index.html",
+      "visits": 1,
+      "lastVisitAt": "2026-08-26T16:52:32.886Z"
     }
   },
   "latest": [
+    {
+      "slug": "live-speedometer",
+      "title": "Live Speedometer",
+      "category": "geometry",
+      "path": "/background/geometry/live-speedometer/index.html",
+      "visitorId": "3f542da6-00ac-43ae-a7e0-ec6eee96da2f",
+      "embedded": false,
+      "visitedAt": "2026-08-26T16:52:32.886Z",
+      "publicInfo": {
+        "language": "en-PH",
+        "timezone": "Asia/Manila",
+        "screen": "1920x1080",
+        "referrer": "https://experimental-self.vercel.app/",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+      }
+    },
     {
       "slug": "analog-control-system",
       "title": "Analog Control System",
