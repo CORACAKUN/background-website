@@ -1,5 +1,5 @@
 {
-  "totalVisits": 5,
+  "totalVisits": 6,
   "backgrounds": {
     "constellation-field": {
       "title": "Constellation Field",
@@ -19,8 +19,8 @@
       "title": "Wave Grid",
       "category": "geometry",
       "path": "/background/geometry/wave-grid/index.html",
-      "visits": 2,
-      "lastVisitAt": "2026-08-26T16:10:00.667Z"
+      "visits": 3,
+      "lastVisitAt": "2026-08-26T16:51:07.441Z"
     },
     "dot-field": {
       "title": "Dot Field",
@@ -31,6 +31,22 @@
     }
   },
   "latest": [
+    {
+      "slug": "wave-grid",
+      "title": "Wave Grid",
+      "category": "geometry",
+      "path": "/background/geometry/wave-grid/index.html",
+      "visitorId": "3f542da6-00ac-43ae-a7e0-ec6eee96da2f",
+      "embedded": false,
+      "visitedAt": "2026-08-26T16:51:07.441Z",
+      "publicInfo": {
+        "language": "en-PH",
+        "timezone": "Asia/Manila",
+        "screen": "1920x1080",
+        "referrer": "https://experimental-self.vercel.app/",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+      }
+    },
     {
       "slug": "dot-field",
       "title": "Dot Field",
