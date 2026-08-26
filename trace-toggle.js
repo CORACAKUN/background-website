@@ -1,11 +1,15 @@
 (function () {
   const STORAGE_KEY = "fields.trace.enabled";
+  const FOCUS_STORAGE_KEY = "fields.focus.enabled";
   const root = document.documentElement;
   const originalFillRect = CanvasRenderingContext2D.prototype.fillRect;
   let traceEnabled = localStorage.getItem(STORAGE_KEY) === "true";
+  let focusEnabled = localStorage.getItem(FOCUS_STORAGE_KEY) === "true";
   function syncState() {
     root.dataset.trace = traceEnabled ? "on" : "off";
+    root.dataset.focus = focusEnabled ? "on" : "off";
     window.fieldTraceEnabled = traceEnabled;
+    window.fieldFocusEnabled = focusEnabled;
   }
   function getCanvasSize(ctx) {
     const canvas = ctx.canvas;
@@ -35,24 +39,44 @@
     originalFillRect.call(this, x, y, width, height);
   };
   function addToggle() {
-    const button = document.createElement("button");
-    button.className = "trace-toggle";
-    button.type = "button";
-    button.setAttribute("aria-pressed", String(traceEnabled));
-    button.innerHTML = "<span></span><b>Trace</b>";
-    button.addEventListener("click", () => {
+    const controls = document.createElement("div");
+    controls.className = "field-toggles";
+    controls.setAttribute("aria-label", "Background controls");
+    const focusButton = document.createElement("button");
+    const traceButton = document.createElement("button");
+    focusButton.className = "field-toggle focus-toggle";
+    focusButton.type = "button";
+    focusButton.setAttribute("aria-pressed", String(focusEnabled));
+    focusButton.innerHTML = "<span></span><b>Focus</b>";
+    focusButton.addEventListener("click", () => {
+      focusEnabled = !focusEnabled;
+      localStorage.setItem(FOCUS_STORAGE_KEY, String(focusEnabled));
+      focusButton.setAttribute("aria-pressed", String(focusEnabled));
+      syncState();
+    });
+    traceButton.className = "field-toggle trace-toggle";
+    traceButton.type = "button";
+    traceButton.setAttribute("aria-pressed", String(traceEnabled));
+    traceButton.innerHTML = "<span></span><b>Trace</b>";
+    traceButton.addEventListener("click", () => {
       traceEnabled = !traceEnabled;
       localStorage.setItem(STORAGE_KEY, String(traceEnabled));
-      button.setAttribute("aria-pressed", String(traceEnabled));
+      traceButton.setAttribute("aria-pressed", String(traceEnabled));
       syncState();
     });
     const style = document.createElement("style");
     style.textContent = `
-      .trace-toggle {
+      .field-toggles {
         position: fixed;
         right: 18px;
         top: 18px;
-        z-index: 20;
+        z-index: 2147483647;
+        display: inline-flex;
+        gap: 8px;
+        pointer-events: auto;
+      }
+
+      .field-toggle {
         display: inline-flex;
         align-items: center;
         gap: 8px;
@@ -70,7 +94,7 @@
         pointer-events: auto;
       }
 
-      .trace-toggle span {
+      .field-toggle span {
         width: 8px;
         height: 8px;
         border-radius: 50%;
@@ -78,25 +102,63 @@
         box-shadow: none;
       }
 
-      .trace-toggle[aria-pressed="true"] {
+      .field-toggle[aria-pressed="true"] {
         border-color: rgba(183, 239, 121, 0.52);
         color: #f5ffe9;
       }
 
-      .trace-toggle[aria-pressed="true"] span {
+      .field-toggle[aria-pressed="true"] span {
         background: #b7ef79;
         box-shadow: 0 0 12px rgba(183, 239, 121, 0.85);
       }
 
+      html[data-focus="on"] main,
+      html[data-focus="on"] header,
+      html[data-focus="on"] footer,
+      html[data-focus="on"] nav,
+      html[data-focus="on"] aside,
+      html[data-focus="on"] dialog,
+      html[data-focus="on"] .trace-toggle,
+      html[data-focus="on"] [class*="control"],
+      html[data-focus="on"] [class*="panel"],
+      html[data-focus="on"] [class*="hud"],
+      html[data-focus="on"] [class*="status"],
+      html[data-focus="on"] [class*="meter"],
+      html[data-focus="on"] [class*="legend"],
+      html[data-focus="on"] [class*="label"],
+      html[data-focus="on"] [class*="caption"],
+      html[data-focus="on"] [class*="readout"],
+      html[data-focus="on"] [class*="speed"],
+      html[data-focus="on"] [class*="hint"],
+      html[data-focus="on"] [class*="title"],
+      html[data-focus="on"] [class*="info"],
+      html[data-focus="on"] [class*="instruction"] {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+
+      html[data-focus="on"] .trace-toggle {
+        display: none !important;
+      }
+
+      html[data-focus="on"] .field-toggles,
+      html[data-focus="on"] .focus-toggle {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+      }
+
       @media (max-width: 640px) {
-        .trace-toggle {
+        .field-toggles {
           right: 14px;
           top: 14px;
         }
       }
     `;
     document.head.append(style);
-    document.body.append(button);
+    controls.append(focusButton, traceButton);
+    document.body.append(controls);
   }
   syncState();
   if (document.readyState === "loading") {
