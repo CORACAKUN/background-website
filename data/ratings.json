@@ -4,16 +4,21 @@
       "title": "Wave Grid",
       "category": "geometry",
       "path": "/background/geometry/wave-grid/index.html",
-      "count": 3,
-      "total": 15,
+      "count": 4,
+      "total": 20,
       "stars": {
         "1": 0,
         "2": 0,
         "3": 0,
         "4": 0,
-        "5": 3
+        "5": 4
       },
       "latest": [
+        {
+          "rating": 5,
+          "ratedAt": "2026-08-26T16:51:13.898Z",
+          "visitorId": "3f542da6-00ac-43ae-a7e0-ec6eee96da2f"
+        },
         {
           "rating": 5,
           "ratedAt": "2026-08-26T16:10:02.446Z",
