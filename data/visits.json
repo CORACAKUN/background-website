@@ -1,5 +1,5 @@
 {
-  "totalVisits": 2,
+  "totalVisits": 3,
   "backgrounds": {
     "constellation-field": {
       "title": "Constellation Field",
@@ -14,9 +14,32 @@
       "path": "/background/light/aurora/index.html",
       "visits": 1,
       "lastVisitAt": "2026-08-26T16:05:56.341Z"
+    },
+    "wave-grid": {
+      "title": "Wave Grid",
+      "category": "geometry",
+      "path": "/background/geometry/wave-grid/index.html",
+      "visits": 1,
+      "lastVisitAt": "2026-08-26T16:09:12.151Z"
     }
   },
   "latest": [
+    {
+      "slug": "wave-grid",
+      "title": "Wave Grid",
+      "category": "geometry",
+      "path": "/background/geometry/wave-grid/index.html",
+      "visitorId": "21e0296e-d154-4ebe-9ab1-e613dcf3b6b0",
+      "embedded": false,
+      "visitedAt": "2026-08-26T16:09:12.151Z",
+      "publicInfo": {
+        "language": "en-PH",
+        "timezone": "Asia/Manila",
+        "screen": "1920x1080",
+        "referrer": "https://experimental-self.vercel.app/",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+      }
+    },
     {
       "slug": "aurora",
       "title": "Aurora",
