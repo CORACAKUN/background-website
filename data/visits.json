@@ -1,5 +1,5 @@
 {
-  "totalVisits": 3,
+  "totalVisits": 4,
   "backgrounds": {
     "constellation-field": {
       "title": "Constellation Field",
@@ -19,11 +19,27 @@
       "title": "Wave Grid",
       "category": "geometry",
       "path": "/background/geometry/wave-grid/index.html",
-      "visits": 1,
-      "lastVisitAt": "2026-08-26T16:09:12.151Z"
+      "visits": 2,
+      "lastVisitAt": "2026-08-26T16:10:00.667Z"
     }
   },
   "latest": [
+    {
+      "slug": "wave-grid",
+      "title": "Wave Grid",
+      "category": "geometry",
+      "path": "/background/geometry/wave-grid/index.html",
+      "visitorId": "cf53823e-a161-412a-9fb7-4e2a67466489",
+      "embedded": false,
+      "visitedAt": "2026-08-26T16:10:00.667Z",
+      "publicInfo": {
+        "language": "en-US",
+        "timezone": "Asia/Manila",
+        "screen": "2560x1440",
+        "referrer": "https://experimental-self.vercel.app/",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+      }
+    },
     {
       "slug": "wave-grid",
       "title": "Wave Grid",
