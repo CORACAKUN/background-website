@@ -77,6 +77,27 @@
           "visitorId": "21e0296e-d154-4ebe-9ab1-e613dcf3b6b0"
         }
       ]
+    },
+    "dot-field": {
+      "title": "Dot Field",
+      "category": "particles",
+      "path": "/background/particles/dot-field/index.html",
+      "count": 1,
+      "total": 5,
+      "stars": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 1
+      },
+      "latest": [
+        {
+          "rating": 5,
+          "ratedAt": "2026-08-26T16:10:09.867Z",
+          "visitorId": "0c8ddbd1-83fc-471b-b812-30d5a8acf19e"
+        }
+      ]
     }
   }
 }
