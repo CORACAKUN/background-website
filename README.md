@@ -67,6 +67,43 @@ Most experiments use one or more of these controls:
 Each project includes a short on-screen description of its specific
 interaction.
 
+## Monitoring and ratings
+
+Background pages send anonymous visit events to Vercel API routes and include a
+small star-rating control. The data is stored as JSON in the repository through
+the GitHub Contents API:
+
+```text
+data/visits.json
+data/ratings.json
+```
+
+Because the live site is deployed from `main`, stats should be written to a
+separate branch so every visit does not trigger a new Vercel deployment. The API
+uses `stats-data` by default and creates it from `main` on first write when the
+GitHub token has permission.
+
+Set these Vercel environment variables:
+
+```text
+GITHUB_TOKEN=github fine-grained token with contents read/write access
+GITHUB_OWNER=CORACAKUN
+GITHUB_REPO=background-website
+GITHUB_BRANCH=main
+GITHUB_DATA_BRANCH=stats-data
+ADMIN_TOKEN=choose-a-private-dashboard-token
+```
+
+The admin dashboard is available at:
+
+```text
+/admin/
+```
+
+It asks for `ADMIN_TOKEN` before reading `/api/stats`. Visitor records avoid IP
+storage and only save browser-provided public context such as language,
+timezone, screen size, referrer, user agent, and an anonymous local visitor id.
+
 ## Collection
 
 ### Particles

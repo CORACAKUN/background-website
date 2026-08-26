@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fields Admin</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <span>Fields Admin</span>
+        <h1>Background Monitoring</h1>
+      </div>
+      <form id="token-form">
+        <input id="token" type="password" placeholder="Admin token" autocomplete="current-password" />
+        <button type="submit">Load Stats</button>
+      </form>
+    </header>
+
+    <main>
+      <section class="metrics">
+        <article>
+          <span>Total Visits</span>
+          <strong id="total-visits">0</strong>
+        </article>
+        <article>
+          <span>Rated Backgrounds</span>
+          <strong id="rated-count">0</strong>
+        </article>
+        <article>
+          <span>Average Rating</span>
+          <strong id="average-rating">0.00</strong>
+        </article>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>Backgrounds</h2>
+          <span id="updated-at">Not loaded</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Background</th>
+                <th>Category</th>
+                <th>Visits</th>
+                <th>Rating</th>
+                <th>Votes</th>
+                <th>Last Visit</th>
+              </tr>
+            </thead>
+            <tbody id="background-rows">
+              <tr>
+                <td colspan="6">Enter the admin token to load stats.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>Latest Visits</h2>
+        </div>
+        <div id="latest-visits" class="latest-list"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
