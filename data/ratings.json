@@ -46,16 +46,21 @@
       "title": "Aurora",
       "category": "light",
       "path": "/background/light/aurora/index.html",
-      "count": 1,
-      "total": 5,
+      "count": 2,
+      "total": 9,
       "stars": {
         "1": 0,
         "2": 0,
         "3": 0,
-        "4": 0,
+        "4": 1,
         "5": 1
       },
       "latest": [
+        {
+          "rating": 4,
+          "ratedAt": "2026-08-26T16:06:05.785Z",
+          "visitorId": "21e0296e-d154-4ebe-9ab1-e613dcf3b6b0"
+        },
         {
           "rating": 5,
           "ratedAt": "2026-08-26T16:06:03.237Z",
