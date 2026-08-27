@@ -1,5 +1,5 @@
 {
-  "totalVisits": 16,
+  "totalVisits": 17,
   "backgrounds": {
     "constellation-field": {
       "title": "Constellation Field",
@@ -19,8 +19,8 @@
       "title": "Wave Grid",
       "category": "geometry",
       "path": "/background/geometry/wave-grid/index.html",
-      "visits": 3,
-      "lastVisitAt": "2026-08-26T16:51:07.441Z"
+      "visits": 4,
+      "lastVisitAt": "2026-08-27T12:12:08.146Z"
     },
     "dot-field": {
       "title": "Dot Field",
@@ -87,6 +87,22 @@
     }
   },
   "latest": [
+    {
+      "slug": "wave-grid",
+      "title": "Wave Grid",
+      "category": "geometry",
+      "path": "/background/geometry/wave-grid/index.html",
+      "visitorId": "ebe0aff0-69f1-4c78-900a-6e4661a7a685",
+      "embedded": false,
+      "visitedAt": "2026-08-27T12:12:08.146Z",
+      "publicInfo": {
+        "language": "en-US",
+        "timezone": "Asia/Manila",
+        "screen": "412x915",
+        "referrer": "https://experimental-self.vercel.app/",
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36"
+      }
+    },
     {
       "slug": "cyberpunk-road",
       "title": "Cyberpunk Road",
